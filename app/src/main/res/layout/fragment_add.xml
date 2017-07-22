@@ -4,20 +4,205 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#333333"
-    tools:context="com.example.ewelina.spisek.AddFragment">
+    tools:context="com.example.ewelina.spisek.AddFragment"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_height="347dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="16dp"
+        android:background="#f2f2f2"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        tools:layout_constraintLeft_creator="1"></LinearLayout>
+
+    <EditText
+        android:id="@+id/editText_title"
+        android:layout_width="225dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="171dp"
+        android:layout_marginEnd="13dp"
+        app:layout_constraintRight_toRightOf="@+id/back"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        android:layout_marginRight="13dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="356dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="356dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="30dp"
+        tools:layout_editor_absoluteY="30dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline3"
+        app:layout_constraintGuide_begin="31dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="31dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="6dp"
+        android:padding="10dp"
+        android:text="Tytuł"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@+id/editText_title"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_title"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintTop_toTopOf="@+id/editText_title" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="6dp"
+        android:padding="10dp"
+        android:text="Śpiewnik"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@+id/editText_place"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_marginEnd="6dp" />
+
+    <EditText
+        android:id="@+id/editText_place"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/editText_title"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/editText_title"
         tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/editText_title" />
+
+    <EditText
+        android:id="@+id/editText_nr"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/editText_page"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/editText_page"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/editText_page" />
+
+    <EditText
+        android:id="@+id/editText_page"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/editText_place"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/editText_place"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/editText_place" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="100dp"
+        android:layout_height="135dp"
+        android:layout_marginRight="6dp"
+        android:padding="10dp"
+        android:text="Tekst"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@+id/editText_lyrics"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:layout_marginEnd="6dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="6dp"
+        android:padding="10dp"
+        android:text="Strona"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@+id/editText_page"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:layout_marginEnd="6dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="6dp"
+        android:padding="10dp"
+        android:text="Numer"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@+id/editText_nr"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginEnd="6dp" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="25dp"
+        android:background="#5fcb34"
+        android:text="Dodaj"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <EditText
+        android:id="@+id/editText_lyrics"
+        android:layout_width="0dp"
+        android:layout_height="135dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/editText_nr"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/editText_nr"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/editText_nr" />
+
 </android.support.constraint.ConstraintLayout>
