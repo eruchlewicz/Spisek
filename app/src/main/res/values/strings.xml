@@ -7,4 +7,15 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="brew_array">
+        <item>Przymierze</item>
+        <item>Segregator</item>
+        <item>Niebieski Oli</item>
+        <item>Exultate Deo</item>
+        <item>Białostocki</item>
+        <item>Muzykolekcje</item>
+        <item>Matce Słuchającej</item>
+        <item>Nuty</item>
+    </string-array>
 </resources>
