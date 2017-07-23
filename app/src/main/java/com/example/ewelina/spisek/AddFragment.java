@@ -39,6 +39,8 @@ public class AddFragment extends Fragment {
             public void onClick(View v) {
                 boolean isInserted = myDB.insertData(editTitle.getText().toString(), editPlace.getText().toString(), editPage.getText().toString(),
                         editNr.getText().toString(), editLyrics.getText().toString());
+                if(isInserted == true) Toast.makeText(getActivity(), "Piosenka została dodana.", Toast.LENGTH_LONG).show();
+                else Toast.makeText(getActivity(), "Piosenka nie została dodana.", Toast.LENGTH_LONG).show();
             }
         });
     }

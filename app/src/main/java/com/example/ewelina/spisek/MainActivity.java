@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
+        tx.replace(R.id.main_container, new SearchFragment());
+        tx.commit();
 
         bottomNavigation = (BottomNavigationView)findViewById(R.id.bottom_navigation);
         bottomNavigation.inflateMenu(R.menu.navigation);
@@ -67,36 +70,5 @@ public class MainActivity extends AppCompatActivity {
 
         myDB = new DatabaseHelper(this);
 
-    }
-
-    public void Wyswietl() {
-        btnWyswietl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Cursor res = myDB.viewData();
-                if(res.getCount() == 0) {
-                    showMessage("Błąd", "Nic nie znaleziono.");
-                    return;
-                }
-                StringBuffer buffer = new StringBuffer();
-                while(res.moveToNext()) {
-                    buffer.append("Id: " + res.getString(0) + "\n");
-                    buffer.append("Tytuł: " + res.getString(1) + "\n");
-                    buffer.append("Śpiewnik: " + res.getString(2) + "\n");
-                    buffer.append("Strona: " + res.getString(3) + "\n");
-                    buffer.append("Nr: " + res.getString(4) + "\n");
-                    buffer.append("Słowa: " + res.getString(5) + "\n\n");
-                }
-                showMessage("Dane", buffer.toString());
-            }
-        });
-    }
-
-    public void showMessage(String title, String Message) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle(title);
-        builder.setMessage(Message);
-        builder.show();
     }
 }

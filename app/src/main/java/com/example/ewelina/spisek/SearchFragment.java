@@ -15,6 +15,7 @@ import android.widget.Spinner;
 public class SearchFragment extends Fragment {
 
     DatabaseHelper myDB;
+    EditText editSearchTitle;
     Button btnWyswietl;
 
     public SearchFragment() {
@@ -24,6 +25,7 @@ public class SearchFragment extends Fragment {
         myDB = new DatabaseHelper(getActivity());
         View v = inflater.inflate(R.layout.fragment_search, container, false);
         btnWyswietl = (Button)v.findViewById(R.id.button_view);
+        editSearchTitle = (EditText) v.findViewById(R.id.title_filter);
         Wyswietl();
         return v;
     }
@@ -39,14 +41,17 @@ public class SearchFragment extends Fragment {
                 }
                 StringBuffer buffer = new StringBuffer();
                 while(res.moveToNext()) {
-                    buffer.append("Id: " + res.getString(0) + "\n");
-                    buffer.append("Tytuł: " + res.getString(1) + "\n");
-                    buffer.append("Śpiewnik: " + res.getString(2) + "\n");
-                    buffer.append("Strona: " + res.getString(3) + "\n");
-                    buffer.append("Nr: " + res.getString(4) + "\n");
-                    buffer.append("Słowa: " + res.getString(5) + "\n\n");
+                    if(res.getString(1).toLowerCase().contains(editSearchTitle.getText().toString().toLowerCase())
+                            || res.getString(5).toLowerCase().contains(editSearchTitle.getText().toString().toLowerCase())) {
+                        buffer.append("Id: " + res.getString(0) + "\n");
+                        buffer.append("Tytuł: " + res.getString(1) + "\n");
+                        buffer.append("Śpiewnik: " + res.getString(2) + "\n");
+                        buffer.append("Strona: " + res.getString(3) + "\n");
+                        buffer.append("Nr: " + res.getString(4) + "\n\n");
+                        //buffer.append("Słowa: " + res.getString(5) + "\n\n");
+                    }
                 }
-                showMessage("Dane", buffer.toString());
+                showMessage("Znalezione utwory:", buffer.toString());
             }
         });
     }
