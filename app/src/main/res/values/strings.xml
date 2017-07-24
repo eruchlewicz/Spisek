@@ -8,7 +8,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string-array name="brew_array">
+    <string-array name="songbooks">
+        <item></item>
         <item>Przymierze</item>
         <item>Segregator</item>
         <item>Niebieski Oli</item>
@@ -17,5 +18,18 @@
         <item>Muzykolekcje</item>
         <item>Matce Słuchającej</item>
         <item>Nuty</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item></item>
+        <item>Duch Święty</item>
+        <item>Uwielbienie</item>
+        <item>Wejście</item>
+        <item>Ofiarowanie</item>
+        <item>Komunia</item>
+        <item>Wyjście</item>
+        <item>Wystawienie</item>
+        <item>Przed błogosławieństwem</item>
+        <item>Adoracja</item>
     </string-array>
 </resources>

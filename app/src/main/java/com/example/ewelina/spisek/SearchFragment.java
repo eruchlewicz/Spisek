@@ -7,16 +7,21 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class SearchFragment extends Fragment {
+public class SearchFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     DatabaseHelper myDB;
     EditText editSearchTitle;
     Button btnWyswietl;
+    Spinner spinner;
+    String songbook;
 
     public SearchFragment() {
     }
@@ -26,7 +31,12 @@ public class SearchFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_search, container, false);
         btnWyswietl = (Button)v.findViewById(R.id.button_view);
         editSearchTitle = (EditText) v.findViewById(R.id.title_filter);
+        spinner = (Spinner) v.findViewById(R.id.search_place);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.songbooks, android.R.layout.simple_spinner_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
         Wyswietl();
+
         return v;
     }
 
@@ -41,8 +51,9 @@ public class SearchFragment extends Fragment {
                 }
                 StringBuffer buffer = new StringBuffer();
                 while(res.moveToNext()) {
-                    if(res.getString(1).toLowerCase().contains(editSearchTitle.getText().toString().toLowerCase())
-                            || res.getString(5).toLowerCase().contains(editSearchTitle.getText().toString().toLowerCase())) {
+                    if((res.getString(1).toLowerCase().contains(editSearchTitle.getText().toString().toLowerCase())
+                            || res.getString(5).toLowerCase().contains(editSearchTitle.getText().toString().toLowerCase()))
+                            && res.getString(2).contains(songbook)) {
                         buffer.append("Id: " + res.getString(0) + "\n");
                         buffer.append("Tytuł: " + res.getString(1) + "\n");
                         buffer.append("Śpiewnik: " + res.getString(2) + "\n");
@@ -62,5 +73,15 @@ public class SearchFragment extends Fragment {
         builder.setTitle(title);
         builder.setMessage(Message);
         builder.show();
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        songbook = spinner.getSelectedItem().toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
