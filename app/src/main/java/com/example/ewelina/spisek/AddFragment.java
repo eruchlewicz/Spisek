@@ -28,7 +28,6 @@ public class AddFragment extends Fragment {
         editNr = (EditText)v.findViewById(R.id.editText_nr);
         editLyrics = (EditText)v.findViewById(R.id.editText_lyrics);
         btnDodaj = (Button)v.findViewById(R.id.button_add);
-        btnWyswietl = (Button)v.findViewById(R.id.button_view);
         Dodaj();
         return v;
     }
@@ -37,10 +36,24 @@ public class AddFragment extends Fragment {
         btnDodaj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String regexStr = "^[0-9]*$";
+                if(!editPage.getText().toString().trim().matches(regexStr))
+                    editPage.setError( "Podaj numer strony" );
+                if( editTitle.getText().toString().length() == 0 )
+                    editTitle.setError( "Tytuł jest wymagany!" );
+                if( editPlace.getText().toString().length() == 0 )
+                    editPlace.setError( "Wybierz śpiewnik" );
+                if( editPage.getText().toString().length() == 0 )
+                    editPage.setError( "Podaj stronę" );
+
+                if( editPage.getText().toString().length() > 0 && editPlace.getText().toString().length() > 0
+                        && editPage.getText().toString().length() > 0 && editPage.getText().toString().trim().matches(regexStr))
+                {
+
                 boolean isInserted = myDB.insertData(editTitle.getText().toString(), editPlace.getText().toString(), editPage.getText().toString(),
                         editNr.getText().toString(), editLyrics.getText().toString());
                 if(isInserted == true) Toast.makeText(getActivity(), "Piosenka została dodana.", Toast.LENGTH_LONG).show();
-                else Toast.makeText(getActivity(), "Piosenka nie została dodana.", Toast.LENGTH_LONG).show();
+                else Toast.makeText(getActivity(), "Piosenka nie została dodana.", Toast.LENGTH_LONG).show();}
             }
         });
     }
