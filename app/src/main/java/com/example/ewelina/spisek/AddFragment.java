@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class AddFragment extends Fragment implements AdapterView.OnItemSelectedListener{
 
     DatabaseHelper myDB;
-    EditText editTitle, editPage, editNr, editLyrics;
+    EditText editTitle, editPage, editNr, editLyrics, editChords;
     Button btnDodaj;
     Spinner spinner2;
 
@@ -30,6 +30,7 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
         editPage = (EditText)v.findViewById(R.id.editText_page);
         editNr = (EditText)v.findViewById(R.id.editText_nr);
         editLyrics = (EditText)v.findViewById(R.id.editText_lyrics);
+        editChords = (EditText) v.findViewById(R.id.editText_chords);
         btnDodaj = (Button)v.findViewById(R.id.button_add);
         Dodaj();
         spinner2 = (Spinner) v.findViewById(R.id.spinner2);
@@ -58,7 +59,7 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
                 {
 
                 boolean isInserted = myDB.insertData(editTitle.getText().toString(), spinner2.getSelectedItem().toString(), editPage.getText().toString(),
-                        editNr.getText().toString(), editLyrics.getText().toString());
+                        editNr.getText().toString(), editLyrics.getText().toString(), editChords.getText().toString());
                 if(isInserted == true) Toast.makeText(getActivity(), "Piosenka została dodana.", Toast.LENGTH_LONG).show();
                 else Toast.makeText(getActivity(), "Piosenka nie została dodana.", Toast.LENGTH_LONG).show();}
             }

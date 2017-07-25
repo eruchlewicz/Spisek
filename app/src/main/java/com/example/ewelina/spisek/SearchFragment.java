@@ -58,8 +58,9 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
                         buffer.append("Tytuł: " + res.getString(1) + "\n");
                         buffer.append("Śpiewnik: " + res.getString(2) + "\n");
                         buffer.append("Strona: " + res.getString(3) + "\n");
-                        buffer.append("Nr: " + res.getString(4) + "\n\n");
+                        buffer.append("Nr: " + res.getString(4) + "\n");
                         //buffer.append("Słowa: " + res.getString(5) + "\n\n");
+                        buffer.append("Akordy: " + res.getString(6) + "\n\n");
                     }
                 }
                 showMessage("Znalezione utwory:", buffer.toString());

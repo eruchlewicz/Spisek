@@ -3,33 +3,24 @@
     <string name="title_home">Wyszukaj</string>
     <string name="title_add">Dodaj</string>
     <string name="title_info">Usuń</string>
-    <string name="title_activity_add">Add</string>
+    <string name="title_songbook">Śpiewniki</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string-array name="songbooks">
+        <item></item>
+        <item>Przymierzowy</item>
+        <item>Pomarańczowy segregator</item>
+        <item>Niebieski Oli Ptaszyńskiej</item>
+        <item>Exultate Deo</item>
+        <item>Czerwony białostocki</item>
+        <item>Muzykolekcje</item>
+        <item>Matce Słuchającej</item>
+        <item>Przyjaciół Oblubieńca</item>
+        <item>Nuty</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string-array name="songbooks">
-        <item></item>
-        <item>Przymierze</item>
-        <item>Segregator</item>
-        <item>Niebieski Oli</item>
-        <item>Exultate Deo</item>
-        <item>Białostocki</item>
-        <item>Muzykolekcje</item>
-        <item>Matce Słuchającej</item>
-        <item>Nuty</item>
-    </string-array>
-
-    <string-array name="categories">
-        <item></item>
-        <item>Duch Święty</item>
-        <item>Uwielbienie</item>
-        <item>Wejście</item>
-        <item>Ofiarowanie</item>
-        <item>Komunia</item>
-        <item>Wyjście</item>
-        <item>Wystawienie</item>
-        <item>Przed błogosławieństwem</item>
-        <item>Adoracja</item>
-    </string-array>
 </resources>
