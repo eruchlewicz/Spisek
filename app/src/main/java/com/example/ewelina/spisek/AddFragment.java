@@ -51,11 +51,9 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
                     editTitle.setError( "Tytuł jest wymagany!" );
                 if( spinner2.getSelectedItem().toString().length() == 0 )
                     Toast.makeText(getActivity(), "Wybierz śpiewnik!", Toast.LENGTH_LONG).show();
-                if( editPage.getText().toString().length() == 0 )
-                    editPage.setError( "Podaj stronę" );
 
-                if( editPage.getText().toString().length() > 0 && spinner2.getSelectedItem().toString().length() > 0
-                        && editPage.getText().toString().length() > 0 && editPage.getText().toString().trim().matches(regexStr))
+                if( editTitle.getText().toString().length() > 0 && spinner2.getSelectedItem().toString().length() > 0
+                        && editPage.getText().toString().trim().matches(regexStr))
                 {
 
                 boolean isInserted = myDB.insertData(editTitle.getText().toString(), spinner2.getSelectedItem().toString(), editPage.getText().toString(),
