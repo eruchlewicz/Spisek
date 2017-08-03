@@ -29,6 +29,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, TITLE TEXT, PLACE TEXT, PAGE INTEGER, NR INTEGER, LYRICS TEXT, CHORDS TEXT );");
 
+// Białostocki
+
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('A moc wychodziła z Niego', 'Białostocki', '5', '', 'A moc wychodziła z Niego i uzdrawiała wszystkich', 'cisEH/AHcis');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('A-a-a-alleluja', 'Białostocki', '5', '', 'i ho-ho-ho-hosanna', 'CFG/CF/GC');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Albowiem tak Bóg', 'Białostocki', '5', '', 'Syna jednorodzonego dał, życie wieczne miał', 'dC/dCd/dC/dCd/CFg/dA7');");
@@ -97,7 +99,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ci co zaufali Panu', 'Białostocki', '31', '', '', 'Dh/GAD');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ci którzy Jahwe ufają', 'Białostocki', '31', '', '', 'EHAH');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ciągle zaczynam od nowa', 'Białostocki', '31', '', '', 'CGC/dGC//x2 aFa/eG//x2 dGC/x2');");
-
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Cichy zapada zmrok', 'Białostocki', '32', '', '', 'aGC/FC/aGC/Fa/CFdGCE/ada');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ciebie całą duszą pragnę', 'Białostocki', '32', '', 'Boże, jesteś moim Bogiem', 'agad/FC/FBCd/ad// dCd/BF/dCF/dA7d');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Cieszę się Jezus zbawił mnie', 'Białostocki', '33', '', '', 'EH7/H7/E/EAH7// cisAH7E');");
@@ -179,6 +180,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jeden jest tylko Pan', 'Białostocki', '63', '', '', 'dgCd/dC/Ad(C)');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jedno morze nie objęte wkrąg', 'Białostocki', '63', '', '', 'gd/gF/gF/dEs// gB/Escd/BFg/EsFg');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jedyny Pan prawdziwy Bóg', 'Białostocki', '64', '', '', 'aDGC/x2 FG/aDGC');");
+
+// Przymierzowy
 
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Czuję Ciebie jak przepływasz', 'Przymierzowy', '', '1', '', '');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Do Ciebie Panie', 'Przymierzowy', '', '2', '', '');");
@@ -380,7 +383,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Króluj mi Panie', 'Przymierzowy', '', '198', '', '');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Któż jest jak Bóg', 'Przymierzowy', '', '199', '', '');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Któż jest jak nasz Pan cudowny tak', 'Przymierzowy', '', '200', '', '');");
-
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Lwie Judy któryś objął tron', 'Przymierzowy', '', '201', '', '');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Łaską jesteśmy zbawieni', 'Przymierzowy', '', '202', '', '');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Majestat Twój', 'Przymierzowy', '', '203', '', '');");
@@ -537,8 +539,195 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Zmartwychwstał Pan zwycięstwa chwałą niebo brzmi', 'Przymierzowy', '', '354', 'Baranek Królem jest', '');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Zwiastunom z gór', 'Przymierzowy', '', '355', '', '');");
 
+// Muzykolekcje
 
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kyrie (Panie) Kowalski', 'Muzykolekcje', '11', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Agnus Dei (Baranku Boży) Kowalski', 'Muzykolekcje', '11', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Sanctus (Święty) Kowalski', 'Muzykolekcje', '12', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Gloria', 'Muzykolekcje', '13', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja Jamneńskie', 'Muzykolekcje', '14', '', '', 'fis');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja wielkanocne Kowalski', 'Muzykolekcje', '15', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja (Ps 148) Kowalski', 'Muzykolekcje', '16', '', 'Niech zabrzmi Panu chwała w niebiosach', 'a');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Wietrze Kowalski', 'Muzykolekcje', '17', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty przyjdź Pocieszycielu przyjdź Pałka', 'Muzykolekcje', '18', '', '', 'F');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty wołam przyjdź', 'Muzykolekcje', '21', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('ITE (Idźcie) MISSA MARTYRUM Pałka', 'Muzykolekcje', '22', '', '', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Swojego Ducha Panie wylej na nas dziś', 'Muzykolekcje', '27', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Modlitwa do Ducha Świętego (Veni Sancte Spiritus) Pałka', 'Muzykolekcje', '28', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pan wywyższony nasz Król wywyższony', 'Muzykolekcje', '34', '', '', 'F');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty napełnij serce Kowalski', 'Muzykolekcje', '35', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Uwielbiam Cię Abba Pałka', 'Muzykolekcje', '36', '', '', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dotyk Ognia (Oto ja poślij mnie)', 'Muzykolekcje', '36', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kto odczuwa pragnienie niech przyjdzie Bębenek', 'Muzykolekcje', '37', '', '', 'g');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty Tchnienie Ojca Dawco życia', 'Muzykolekcje', '38', '', '', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Błogosław Duszo moja Pana', 'Muzykolekcje', '39', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Godzien o godzien jest Bóg', 'Muzykolekcje', '42', '', 'Godzien o godzien nasz Bóg', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus zwyciężył to wykonało się', 'Muzykolekcje', '43', '', '', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Królu Niebieski Pocieszycielu', 'Muzykolekcje', '44', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Na Komunię (Kto spożywa Moje Ciało) Pałka', 'Muzykolekcje', '45', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niech nas ogarnie (Łaska Pana) Pałka', 'Muzykolekcje', '45', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Na wieki będę wyśpiewywał Twe miłosierdzie Pałka', 'Muzykolekcje', '46', '', '', 'a');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niechaj zstąpi Duch Twój', 'Muzykolekcje', '46', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Płomień Miłości (Niechaj Płomień)', 'Muzykolekcje', '47', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pomódl się Miriam', 'Muzykolekcje', '48', '', '', 'D7+');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przychodzisz Panie mimo drzwi zamkniętych', 'Muzykolekcje', '49', '', '', 'F');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wiązanka pieśni izraelskich', 'Muzykolekcje', '50', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wzywam Cię Duchu przyjdź', 'Muzykolekcje', '51', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('O Stworzycielu Duchu przyjdź', 'Muzykolekcje', '52', '', 'Hymn do Ducha Świętego', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przybądź Duchu Święty (Sekwencja)', 'Muzykolekcje', '53', '', 'Sekwencja do Ducha Świętego', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ciebie Boga wysławiamy', 'Muzykolekcje', '54', '', '', 'brak');");
 
+// Oli
+
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przyjdź jak deszcz', 'Niebieski Oli Ptaszyńskiej', '1', '', '', 'cis');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wzywam Cię Duchu przyjdź', 'Niebieski Oli Ptaszyńskiej', '1', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Swojego Ducha Panie wylej na nas dziś', 'Niebieski Oli Ptaszyńskiej', '1', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ześlij deszcz', 'Niebieski Oli Ptaszyńskiej', '2', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty przyjdź i rozpal nas', 'Niebieski Oli Ptaszyńskiej', '2', '', '', 'a');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ruah', 'Niebieski Oli Ptaszyńskiej', '2', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ja pragnę więcej Ciebie', 'Niebieski Oli Ptaszyńskiej', '2', '', '', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dotknij Panie moich oczu', 'Niebieski Oli Ptaszyńskiej', '2', '', '', 'cis7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Każdy spragniony', 'Niebieski Oli Ptaszyńskiej', '3', '', 'Panie Jezu przyjdź', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty Tchnienie Ojca Dawco Życia', 'Niebieski Oli Ptaszyńskiej', '3', '', '', 'F');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('O przyjdź wypełnij mnie', 'Niebieski Oli Ptaszyńskiej', '3', '', '', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jak ożywczy deszcz', 'Niebieski Oli Ptaszyńskiej', '4', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Poruszaj się Duchu Święty w nas', 'Niebieski Oli Ptaszyńskiej', '4', '', '', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty wołam przyjdź choć jak wiatr ukrywasz się', 'Niebieski Oli Ptaszyńskiej', '4', '', '', 'cis7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Świety zapraszamy Cię', 'Niebieski Oli Ptaszyńskiej', '5', '', '', 'E5');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Rzuć ogień Swój', 'Niebieski Oli Ptaszyńskiej', '5', '', '', 'cis7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niechaj zstąpi Duch Twój', 'Niebieski Oli Ptaszyńskiej', '6', '', '', 'e7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Stoję dziś', 'Niebieski Oli Ptaszyńskiej', '7', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Świętemu Bogu oddaj cześć', 'Niebieski Oli Ptaszyńskiej', '7', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Godzien chwały jest Baranek', 'Niebieski Oli Ptaszyńskiej', '7', '', '', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Nie bój się nie lękaj się', 'Niebieski Oli Ptaszyńskiej', '7', '', '', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezu jesteś tu świat odszedł w cień', 'Niebieski Oli Ptaszyńskiej', '8', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jesteśmy chwilą', 'Niebieski Oli Ptaszyńskiej', '8', '', 'Święty święty Bóg wszechmogący', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Panie mym pragnieniem', 'Niebieski Oli Ptaszyńskiej', '8', '', 'Serce oddaję Ci', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Panie ogień pal', 'Niebieski Oli Ptaszyńskiej', '8', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bądź blisko mnie', 'Niebieski Oli Ptaszyńskiej', '9', '', '', 'D2');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wszystko mogę w tym który mnie umacnia', 'Niebieski Oli Ptaszyńskiej', '9', '', '', 'cis');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bliżej', 'Niebieski Oli Ptaszyńskiej', '9', '', '', 'd7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Twoja chwała jest jak', 'Niebieski Oli Ptaszyńskiej', '10', '', 'Ty dałeś mi nadzieję dziś Age to age', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ukojenie', 'Niebieski Oli Ptaszyńskiej', '10', '', '', 'F');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Chlebie najcichszy', 'Niebieski Oli Ptaszyńskiej', '10', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Uczniowie pana', 'Niebieski Oli Ptaszyńskiej', '11', '', 'Powołani przez słowo Jezusa Tyś nas Mistrzu powołał', 'A2');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Do mnie wróć', 'Niebieski Oli Ptaszyńskiej', '11', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Tobie chwała', 'Niebieski Oli Ptaszyńskiej', '11', '', '', 'A7+');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wypełnił się czas Eliasza', 'Niebieski Oli Ptaszyńskiej', '12', '', '', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Miłość Twa Panie uskrzydla kształtuje', 'Niebieski Oli Ptaszyńskiej', '12', '', '', 'A7+');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Zabrałeś cały strach', 'Niebieski Oli Ptaszyńskiej', '12', '', 'W Tobie jestem wolny', 'A/Cis');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Każdy dzień upewnia mnie', 'Niebieski Oli Ptaszyńskiej', '13', '', 'Nikt nie odbierze mi tego', 'e7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Oddaję Ci życie swe', 'Niebieski Oli Ptaszyńskiej', '13', '', '', 'D/Fis');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pan wywyższony nasz Król wywyższony', 'Niebieski Oli Ptaszyńskiej', '14', '', '', 'F');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ja wiem że jesteś Panie mój', 'Niebieski Oli Ptaszyńskiej', '14', '', '', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bogu jedynemu Jezusowi chwała i cześć', 'Niebieski Oli Ptaszyńskiej', '14', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wszystko co mam to prawda i łaska', 'Niebieski Oli Ptaszyńskiej', '15', '', '', 'B');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bóg jest zawsze między nami', 'Niebieski Oli Ptaszyńskiej', '15', '', 'Emmanuel', 'a');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Temu chwała', 'Niebieski Oli Ptaszyńskiej', '15', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ja widzę Króla chwały', 'Niebieski Oli Ptaszyńskiej', '16', '', 'Hosanna na niebiosach', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Lament Piotra', 'Niebieski Oli Ptaszyńskiej', '16', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('A moc wychodziła z Niego', 'Niebieski Oli Ptaszyńskiej', '16', '', '', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Panie przyjdź cały jestem oczekiwaniem', 'Niebieski Oli Ptaszyńskiej', '17', '', '', 'e7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja zakrólował wszechmocny nasz Bóg', 'Niebieski Oli Ptaszyńskiej', '17', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bądź wywyższony Jezu na wieki', 'Niebieski Oli Ptaszyńskiej', '17', '', '', 'E/Gis');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Twoje Słowo jest lampą', 'Niebieski Oli Ptaszyńskiej', '17', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Me imię znasz', 'Niebieski Oli Ptaszyńskiej', '18', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przy Tobie moje miejsce jest', 'Niebieski Oli Ptaszyńskiej', '18', '', 'Jesteś mą światłością w mroku', 'c9');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duszo ma Pana chwal', 'Niebieski Oli Ptaszyńskiej', '19', '', '', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ty jesteś dobry', 'Niebieski Oli Ptaszyńskiej', '19', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ukaż mi Panie Swą twarz', 'Niebieski Oli Ptaszyńskiej', '19', '', '', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pełen miłości miłosierdzia', 'Niebieski Oli Ptaszyńskiej', '20', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Całe życie oddać chcę', 'Niebieski Oli Ptaszyńskiej', '20', '', '', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Zaśpiewać chce miłości pieśń', 'Niebieski Oli Ptaszyńskiej', '20', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przytul mnie Jezu', 'Niebieski Oli Ptaszyńskiej', '21', '', '', 'cis7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bóg Jam Jest', 'Niebieski Oli Ptaszyńskiej', '21', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przyjdzie moc', 'Niebieski Oli Ptaszyńskiej', '21', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Nasz Bóg jest potężny w mocy Swej', 'Niebieski Oli Ptaszyńskiej', '22', '', '', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Mój Jezu mój Zbawco', 'Niebieski Oli Ptaszyńskiej', '22', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Chwalcie Pana narody', 'Niebieski Oli Ptaszyńskiej', '22', '', '', 'g');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Głosimy Jezusa moc', 'Niebieski Oli Ptaszyńskiej', '23', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Oddajmy cześć wiecznemu Panu chwał', 'Niebieski Oli Ptaszyńskiej', '23', '', '', 'a7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Nie mam nic co mógłbym Tobie dać', 'Niebieski Oli Ptaszyńskiej', '24', '', 'Więc serce swe oddaję Ci', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Już nie szukam Panie', 'Niebieski Oli Ptaszyńskiej', '24', '', 'Jezu do kogo mam pójść', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Tobie chór aniołów śpiewa nową pieśń', 'Niebieski Oli Ptaszyńskiej', '24', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bielszy niż śnieg', 'Niebieski Oli Ptaszyńskiej', '25', '', 'Ponad śnieg bielszy będę', 'B');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Złam każdy grzech', 'Niebieski Oli Ptaszyńskiej', '25', '', '', 'fis');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niepojęta łaska Jego', 'Niebieski Oli Ptaszyńskiej', '26', '', '', 'G9/H');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ty światłość dnia', 'Niebieski Oli Ptaszyńskiej', '26', '', 'Jestem tu by wielbić', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus Cię kocha pragnie leczy', 'Niebieski Oli Ptaszyńskiej', '27', '', '', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus zwyciężył to wykonało się', 'Niebieski Oli Ptaszyńskiej', '27', '', '', 'd7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Nie chcę w innym miejscu być', 'Niebieski Oli Ptaszyńskiej', '27', '', '', 'D2');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bóg i tylko On', 'Niebieski Oli Ptaszyńskiej', '27', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Śpiewajmy Mu dziękujmy Mu', 'Niebieski Oli Ptaszyńskiej', '28', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przyjdź i zajmij miejsce Swe', 'Niebieski Oli Ptaszyńskiej', '28', '', '', 'h7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Chwalę Cię Panie całym moim sercem', 'Niebieski Oli Ptaszyńskiej', '28', '', 'Chwalę Cię Panie całym swoim sercem', 'h7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przyjaciela mam', 'Niebieski Oli Ptaszyńskiej', '29', '', '', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jak wielki jest Bóg', 'Niebieski Oli Ptaszyńskiej', '29', '', 'To On nasz Pan i Król', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Chlebie żywy łamany drzewem Krzyża', 'Niebieski Oli Ptaszyńskiej', '29', '', '', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Błogosławię Cię kiedy ziemia wydaje plon', 'Niebieski Oli Ptaszyńskiej', '30', '', '', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Chcę wywyższać Imię Twe', 'Niebieski Oli Ptaszyńskiej', '30', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Nasz Bóg jest wielki', 'Niebieski Oli Ptaszyńskiej', '31', '', 'Wodę zamieniłeś w wino', 'cis');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Z głębokości mórz', 'Niebieski Oli Ptaszyńskiej', '31', '', 'Niepojęty niezmierzony', 'h');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jesteśmy Twymi dziećmi', 'Niebieski Oli Ptaszyńskiej', '32', '', 'Zbawiciel On porusza góry', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wykrzykujcie na cześć Pana', 'Niebieski Oli Ptaszyńskiej', '32', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus daje nam zbawienie', 'Niebieski Oli Ptaszyńskiej', '33', '', '', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Blisko blisko jesteś Panie mój', 'Niebieski Oli Ptaszyńskiej', '33', '', '', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Stworzyłeś mnie bym kochał Cię', 'Niebieski Oli Ptaszyńskiej', '33', '', '', 'cis7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Mów do mnie Panie', 'Niebieski Oli Ptaszyńskiej', '33', '', 'Święty potężny jesteś Panie nasz', 'A7+');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus najwyższe Imię', 'Niebieski Oli Ptaszyńskiej', '34', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Serce moje jest przy Tobie', 'Niebieski Oli Ptaszyńskiej', '34', '', 'Chwałę oddaję Ci', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Mój Jezus Królem królów jest', 'Niebieski Oli Ptaszyńskiej', '34', '', '', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Otwórz me oczy o Panie', 'Niebieski Oli Ptaszyńskiej', '35', '', '', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ty jesteś Skałą zbawienia mego', 'Niebieski Oli Ptaszyńskiej', '35', '', 'Panie wierzę Ci', 'A2');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('W cieniu Twoich rąk', 'Niebieski Oli Ptaszyńskiej', '36', '', 'Chwyć mnie i nieś', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Chwalę Ciebie Panie i uwielbiam', 'Niebieski Oli Ptaszyńskiej', '36', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kocham Ciebie Jezu', 'Niebieski Oli Ptaszyńskiej', '36', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wystarczy byś był', 'Niebieski Oli Ptaszyńskiej', '36', '', 'Chcę tylko byś był', 'F/C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezu jestem umiłowany Twoj', 'Niebieski Oli Ptaszyńskiej', '37', '', '', 'e7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jego miłość zakrywa grzech', 'Niebieski Oli Ptaszyńskiej', '37', '', '', 'e7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bili Go trzciną i pluli Mu w twarz', 'Niebieski Oli Ptaszyńskiej', '37', '', '', 'h');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Gdy wpatruję się w Twą świeta twarz', 'Niebieski Oli Ptaszyńskiej', '38', '', '', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jak dobrze jest dziękować Ci Panie', 'Niebieski Oli Ptaszyńskiej', '38', '', '', 'a7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Albowiem tak Bóg umiłował świat', 'Niebieski Oli Ptaszyńskiej', '38', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Z Tobą ciemność nie będzie ciemna', 'Niebieski Oli Ptaszyńskiej', '38', '', '', 'h');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niech przyjmie chwałę i cześć', 'Niebieski Oli Ptaszyńskiej', '39', '', '', 'fis7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kogo oprócz Ciebie mam', 'Niebieski Oli Ptaszyńskiej', '39', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jesteś Królem', 'Niebieski Oli Ptaszyńskiej', '39', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus Święty namaszczony Pan', 'Niebieski Oli Ptaszyńskiej', '40', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pomódl się Miriam', 'Niebieski Oli Ptaszyńskiej', '40', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Boże Twa łaska nad nami jest', 'Niebieski Oli Ptaszyńskiej', '40', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dla Ciebie jestem', 'Niebieski Oli Ptaszyńskiej', '41', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bądź Królową moich czystych myśli', 'Niebieski Oli Ptaszyńskiej', '41', '', '', 'e7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('O tak tak Panie mówię tak', 'Niebieski Oli Ptaszyńskiej', '41', '', '', 'e7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kładę życie u Twych stóp', 'Niebieski Oli Ptaszyńskiej', '42', '', 'Jezus Drogą', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Oblubieniec czeka już', 'Niebieski Oli Ptaszyńskiej', '42', '', '', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Zaufałem Panu i już', 'Niebieski Oli Ptaszyńskiej', '43', '', '', 'e7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Twoje ręce to mój ląd', 'Niebieski Oli Ptaszyńskiej', '43', '', '', 'a');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przychodzisz Panie mimo drzwi zamkniętych', 'Niebieski Oli Ptaszyńskiej', '43', '', '', 'F');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Moje wędrowanie Panie mój', 'Niebieski Oli Ptaszyńskiej', '44', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dotknij Panie rany mej', 'Niebieski Oli Ptaszyńskiej', '44', '', 'To co raną jest w mym sercu Wyciągam do Ciebie ręce', 'B');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jak piękne jest mieszkanie Twe', 'Niebieski Oli Ptaszyńskiej', '45', '', 'Lepszy jeden dzień w przedsionkach Twych', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Zaufaj serce me', 'Niebieski Oli Ptaszyńskiej', '45', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Idę Mario do Ciebie', 'Niebieski Oli Ptaszyńskiej', '46', '', '', 'G4');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Prawda jedyna', 'Niebieski Oli Ptaszyńskiej', '46', '', 'Dzięki Ci Boże mój', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Tak ja wierzę w Boga Ojca', 'Niebieski Oli Ptaszyńskiej', '47', '', '', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jesteśmy piękni', 'Niebieski Oli Ptaszyńskiej', '47', '', '', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Na nowo stwarzaj mnie', 'Niebieski Oli Ptaszyńskiej', '48', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przed tronem Twym', 'Niebieski Oli Ptaszyńskiej', '48', '', '', 'D/Fis');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przyjdź Panie Jezu dotknij uzdrów mnie', 'Niebieski Oli Ptaszyńskiej', '48', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jestem wolny', 'Niebieski Oli Ptaszyńskiej', '49', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pragnę śpiewać Ci najpiękniejszą pieśń', 'Niebieski Oli Ptaszyńskiej', '49', '', 'Będę śpiewać Ci najpiękniejszą pieśń Będę śpiewał Ci najpiękniejszą pieśń', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Święte Imię Jezus jest na ustach mych', 'Niebieski Oli Ptaszyńskiej', '49', '', '', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wielbię Cie całe życie Ci oddaję', 'Niebieski Oli Ptaszyńskiej', '49', '', '', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Tak wiarą ruszę góry', 'Niebieski Oli Ptaszyńskiej', '50', '', 'Nic nie zatrzyma mnie', 'd7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Chrystus Pan Boży Syn', 'Niebieski Oli Ptaszyńskiej', '50', '', '', 'F');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jedyny Pan prawdziwy Bóg', 'Niebieski Oli Ptaszyńskiej', '50', '', '', 'a');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Podnieś mnie Jezu', 'Niebieski Oli Ptaszyńskiej', '50', '', '', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Panie proszę zabierz mnie tam', 'Niebieski Oli Ptaszyńskiej', '51', '', '', 'd7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jestem tego pewien', 'Niebieski Oli Ptaszyńskiej', '51', '', '', 'h7');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niechaj miłość Twa jak potężna fala', 'Niebieski Oli Ptaszyńskiej', '51', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Święty święty święty Pan Bóg wszechmocny TGD', 'Niebieski Oli Ptaszyńskiej', '52', '', '', 'a');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Schowaj mnie', 'Niebieski Oli Ptaszyńskiej', '52', '', 'Kiedy fale mórz', 'C');");
 
 
     }
