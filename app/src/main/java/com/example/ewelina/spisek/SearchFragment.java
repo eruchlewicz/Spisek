@@ -61,10 +61,14 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
                         buffer.append("Id: " + res.getString(0) + "\n");
                         buffer.append("Tytuł: " + res.getString(1) + "\n");
                         buffer.append("Śpiewnik: " + res.getString(2) + "\n");
-                        buffer.append("Strona: " + res.getString(3) + "\n");
-                        buffer.append("Nr: " + res.getString(4) + "\n");
+                        if(res.getString(3).length()!=0) {
+                            buffer.append("Strona: " + res.getString(3) + "\n");}
+                        if(res.getString(4).length()!=0) {
+                            buffer.append("Nr: " + res.getString(4) + "\n");}
                         //buffer.append("Słowa: " + res.getString(5) + "\n\n");
-                        buffer.append("Akordy: " + res.getString(6) + "\n\n");
+                        if(res.getString(6).length()!=0) {
+                            buffer.append("Akordy: " + res.getString(6) + "\n");}
+                        buffer.append("\n");
                     }
                 }
                 showMessage("Znalezione utwory:", buffer.toString());
@@ -99,10 +103,15 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
                         buffer2.append("Id: " + res2.getString(0) + "\n");
                         buffer2.append("Tytuł: " + res2.getString(1) + "\n");
                         buffer2.append("Śpiewnik: " + res2.getString(2) + "\n");
-                        buffer2.append("Strona: " + res2.getString(3) + "\n");
-                        buffer2.append("Nr: " + res2.getString(4) + "\n");
+                        if(res2.getString(3).length()!=0) {
+                            buffer2.append("Strona: " + res2.getString(3) + "\n");}
+                        if(res2.getString(4).length()!=0) {
+                            buffer2.append("Nr: " + res2.getString(4) + "\n");}
                         //buffer2.append("Słowa: " + res2.getString(5) + "\n\n");
-                        buffer2.append("Akordy: " + res2.getString(6) + "\n\n");
+                        if(res2.getString(6).length()!=0) {
+                            buffer2.append("Akordy: " + res2.getString(6) + "\n\n");}
+                        buffer2.append("\n");
+
                     }
                     if(res2.getString(2).contains(songbook)) {
                         licznik = licznik + 1;
