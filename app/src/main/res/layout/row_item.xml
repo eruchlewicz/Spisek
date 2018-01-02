@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_thumbnail"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/img_thumbnail"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/songbook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/title"
+        android:layout_below="@+id/title"
+        android:layout_marginRight="25dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/songbook"
+        android:layout_alignStart="@+id/songbook"
+        android:layout_below="@+id/songbook"
+        android:layout_marginBottom="10dp"
+        android:text="Strona: "
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_page"
+        android:layout_alignBottom="@+id/text_page"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_toEndOf="@+id/text_page"
+        android:layout_toRightOf="@+id/text_page"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/page"
+        android:layout_alignBottom="@+id/page"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/page"
+        android:layout_toRightOf="@+id/page"
+        android:text="Nr: "
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_number"
+        android:layout_alignBottom="@+id/text_number"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/text_number"
+        android:layout_toRightOf="@+id/text_number"
+        android:textSize="16sp" />
+
+</android.widget.RelativeLayout>

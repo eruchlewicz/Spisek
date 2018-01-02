@@ -3,6 +3,8 @@ package com.example.ewelina.spisek;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,35 +13,75 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class SearchFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
-    DatabaseHelper myDB;
+    private ListView recycler;
+    private ListAdapter adapter;
+    ArrayList<Song> songs;
+    Cursor cursor;
+    public Integer selected_id = null;
+    DatabaseHelper db;
     EditText editSearchTitle;
-    Button btnWyswietl, btnLosuj;
+    Button btnWyswietl;
     Spinner spinner;
     String songbook;
 
     public SearchFragment() {
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myDB = new DatabaseHelper(getActivity());
+        db = new DatabaseHelper(getActivity());
         View v = inflater.inflate(R.layout.fragment_search, container, false);
         btnWyswietl = (Button)v.findViewById(R.id.button_view);
-        btnLosuj = (Button)v.findViewById(R.id.button_random);
         editSearchTitle = (EditText) v.findViewById(R.id.title_filter);
+        ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.songbooks, android.R.layout.simple_spinner_item);
         spinner = (Spinner) v.findViewById(R.id.search_place);
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.songbooks, android.R.layout.simple_spinner_item);
-        spinner.setAdapter(adapter);
+        spinner.setAdapter(adapter2);
         spinner.setOnItemSelectedListener(this);
         Wyswietl();
-        Losuj();
+
+        db = new DatabaseHelper(getContext());
+        songs = db.getData();
+        adapter= new ListAdapter(getContext(),R.layout.row_item,songs);
+        recycler = (ListView) v.findViewById(R.id.listView);
+        recycler.setAdapter(adapter);
+
+        recycler.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id) {
+                Song song = songs.get(position);
+                db.deleteData(Integer.valueOf(song.getId()));
+                if(db.deleteData(Integer.valueOf(song.getId())) == 0) Toast.makeText(getContext(), "Piosenka została usunięta.", Toast.LENGTH_LONG).show();
+                adapter.remove(adapter.getItem(position));
+                adapter.notifyDataSetChanged();
+                return true;
+            }
+        });
+
+        recycler.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                selected_id = position;
+                Bundle bundle = new Bundle();
+                bundle.putInt("selected_id",selected_id);
+                UpdateFragment fragment = new UpdateFragment();
+                fragment.setArguments(bundle);
+
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction
+                        .replace(R.id.main_container, fragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         return v;
     }
@@ -48,7 +90,7 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
         btnWyswietl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Cursor res = myDB.viewData();
+                Cursor res = db.viewData();
                 if(res.getCount() == 0) {
                     showMessage("Błąd", "Nic nie znaleziono.");
                     return;
@@ -72,52 +114,6 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
                     }
                 }
                 showMessage("Znalezione utwory:", buffer.toString());
-            }
-        });
-    }
-
-    public void Losuj() {
-        btnLosuj.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Cursor res = myDB.viewData();
-                Cursor res2 = myDB.viewData();
-                if(res.getCount() == 0) {
-                    showMessage("Błąd", "Nic nie znaleziono.");
-                    return;
-                }
-                int liczba = 0;
-                StringBuffer buffer = new StringBuffer();
-                while(res.moveToNext()) {
-                    if(res.getString(2).contains(songbook)) {
-                        liczba = liczba + 1;
-                    }
-                }
-                Random rand = new Random();
-                StringBuffer buffer2 = new StringBuffer();
-                if(liczba!=0){
-                int losowa = rand.nextInt(liczba) + 1;
-                int licznik = 0;
-                while(res2.moveToNext() && licznik<=losowa) {
-                    if(licznik == losowa) {
-                        buffer2.append("Id: " + res2.getString(0) + "\n");
-                        buffer2.append("Tytuł: " + res2.getString(1) + "\n");
-                        buffer2.append("Śpiewnik: " + res2.getString(2) + "\n");
-                        if(res2.getString(3).length()!=0) {
-                            buffer2.append("Strona: " + res2.getString(3) + "\n");}
-                        if(res2.getString(4).length()!=0) {
-                            buffer2.append("Nr: " + res2.getString(4) + "\n");}
-                        //buffer2.append("Słowa: " + res2.getString(5) + "\n\n");
-                        if(res2.getString(6).length()!=0) {
-                            buffer2.append("Akordy: " + res2.getString(6) + "\n\n");}
-                        buffer2.append("\n");
-
-                    }
-                    if(res2.getString(2).contains(songbook)) {
-                        licznik = licznik + 1;
-                    }
-                }}
-                showMessage("Znalezione utwory:", buffer2.toString());
             }
         });
     }

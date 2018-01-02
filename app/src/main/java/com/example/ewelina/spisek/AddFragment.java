@@ -2,6 +2,8 @@ package com.example.ewelina.spisek;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class AddFragment extends Fragment implements AdapterView.OnItemSelectedListener{
 
@@ -33,10 +37,11 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
         editChords = (EditText) v.findViewById(R.id.editText_chords);
         btnDodaj = (Button)v.findViewById(R.id.button_add);
         Dodaj();
-        spinner2 = (Spinner) v.findViewById(R.id.spinner2);
+
         ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.songbooks, android.R.layout.simple_spinner_item);
         spinner2.setAdapter(adapter);
         spinner2.setOnItemSelectedListener(this);
+
         return v;
     }
 
@@ -47,18 +52,32 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
                 String regexStr = "^[0-9]*$";
                 if(!editPage.getText().toString().trim().matches(regexStr))
                     editPage.setError( "Podaj numer strony" );
+                if(!editNr.getText().toString().trim().matches(regexStr))
+                    editNr.setError( "Podaj numer piosenki" );
                 if( editTitle.getText().toString().length() == 0 )
                     editTitle.setError( "Tytuł jest wymagany!" );
                 if( spinner2.getSelectedItem().toString().length() == 0 )
                     Toast.makeText(getActivity(), "Wybierz śpiewnik!", Toast.LENGTH_LONG).show();
+                if (editPage.getText().toString().length() == 0 && editNr.getText().toString().length() == 0 )
+                    editTitle.setError("Wpisz stronę lub numer!");
 
                 if( editTitle.getText().toString().length() > 0 && spinner2.getSelectedItem().toString().length() > 0
-                        && editPage.getText().toString().trim().matches(regexStr))
+                        && editPage.getText().toString().trim().matches(regexStr) && editNr.getText().toString().trim().matches(regexStr)
+                        && (editPage.getText().toString().length() != 0 || editNr.getText().toString().length() != 0))
                 {
-
-                boolean isInserted = myDB.insertData(editTitle.getText().toString(), spinner2.getSelectedItem().toString(), editPage.getText().toString(),
+                    boolean isInserted = myDB.insertData(editTitle.getText().toString(), spinner2.getSelectedItem().toString(), editPage.getText().toString(),
                         editNr.getText().toString(), editLyrics.getText().toString(), editChords.getText().toString());
-                if(isInserted == true) Toast.makeText(getActivity(), "Piosenka została dodana.", Toast.LENGTH_LONG).show();
+                if(isInserted == true) {
+                    Toast.makeText(getActivity(), "Piosenka została dodana.", Toast.LENGTH_LONG).show();
+
+                    Fragment fragment = new SearchFragment();
+                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction
+                            .replace(R.id.main_container, fragment)
+                            .addToBackStack(null)
+                            .commit();
+                }
                 else Toast.makeText(getActivity(), "Piosenka nie została dodana.", Toast.LENGTH_LONG).show();}
             }
         });
