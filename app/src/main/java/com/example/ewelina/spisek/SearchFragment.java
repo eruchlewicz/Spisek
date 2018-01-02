@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class SearchFragment extends Fragment implements AdapterView.OnItemSelectedListener {
@@ -43,10 +44,11 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
         View v = inflater.inflate(R.layout.fragment_search, container, false);
         btnWyswietl = (Button)v.findViewById(R.id.button_view);
         editSearchTitle = (EditText) v.findViewById(R.id.title_filter);
-        ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.songbooks, android.R.layout.simple_spinner_item);
         spinner = (Spinner) v.findViewById(R.id.search_place);
-        spinner.setAdapter(adapter2);
+
+        loadSpinnerData();
         spinner.setOnItemSelectedListener(this);
+
         Wyswietl();
 
         db = new DatabaseHelper(getContext());
@@ -134,5 +136,15 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    private void loadSpinnerData() {
+
+        List<String> songbooks = db.getAllSongbooks();
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_spinner_item, songbooks);
+
+        spinner.setAdapter(dataAdapter);
     }
 }

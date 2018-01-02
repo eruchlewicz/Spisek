@@ -21,6 +21,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
+import java.util.List;
 
 public class UpdateFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
@@ -29,7 +30,6 @@ public class UpdateFragment extends Fragment implements AdapterView.OnItemSelect
     EditText editTitle, editPage, editNr, editLyrics, editChords;
     Spinner songbook;
     Button btnZaktualizuj, btnAnuluj;
-    Cursor cursor;
     public Integer selected=null;
 
     public static UpdateFragment newInstance(){
@@ -55,10 +55,6 @@ public class UpdateFragment extends Fragment implements AdapterView.OnItemSelect
         btnZaktualizuj = (Button)rootView.findViewById(R.id.button_update);
         btnAnuluj= (Button)rootView.findViewById(R.id.button_cancel);
 
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.songbooks, android.R.layout.simple_spinner_item);
-        songbook.setAdapter(adapter);
-        songbook.setOnItemSelectedListener(this);
-
         Zaktualizuj();
         Anuluj();
 
@@ -68,6 +64,10 @@ public class UpdateFragment extends Fragment implements AdapterView.OnItemSelect
         }
 
         db = new DatabaseHelper(getContext());
+
+        loadSpinnerData();
+        songbook.setOnItemSelectedListener(this);
+
         songs = db.getData();
         Song song = songs.get(selected);
         selected = Integer.valueOf(song.getId());
@@ -77,7 +77,7 @@ public class UpdateFragment extends Fragment implements AdapterView.OnItemSelect
         editNr.setText(song.getNumber(), TextView.BufferType.EDITABLE);
         editLyrics.setText(song.getLyrics(), TextView.BufferType.EDITABLE);
         editChords.setText(song.getChords(), TextView.BufferType.EDITABLE);
-        //songbook.setSelection(((ArrayAdapter<String>) songbook.getAdapter()).getPosition(song.getSongbook()));
+        songbook.setSelection(((ArrayAdapter<String>) songbook.getAdapter()).getPosition(song.getSongbook()));
 
         return rootView;
     }
@@ -95,8 +95,8 @@ public class UpdateFragment extends Fragment implements AdapterView.OnItemSelect
                     editTitle.setError("Tytuł jest wymagany!");
                 if (editPage.getText().toString().length() == 0 && editNr.getText().toString().length() == 0 )
                     editTitle.setError("Wpisz stronę lub numer!");
-                if(songbook.getSelectedItem().toString().length() == 0 )
-                    Toast.makeText(getActivity(), "Wybierz śpiewnik!", Toast.LENGTH_LONG).show();
+                //if(songbook.getSelectedItem().toString().length() == 0 )
+                    //Toast.makeText(getActivity(), "Wybierz śpiewnik!", Toast.LENGTH_LONG).show();
 
                 if (editTitle.getText().toString().length() > 0 && songbook.getSelectedItem().toString().length() > 0
                         && editPage.getText().toString().trim().matches(regexStr) && editNr.getText().toString().trim().matches(regexStr)
@@ -145,6 +145,16 @@ public class UpdateFragment extends Fragment implements AdapterView.OnItemSelect
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    private void loadSpinnerData() {
+
+        List<String> songbooks = db.getAllSongbooks();
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_spinner_item, songbooks);
+
+        songbook.setAdapter(dataAdapter);
     }
 
 }

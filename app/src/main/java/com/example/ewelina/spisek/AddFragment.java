@@ -13,12 +13,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import java.util.ArrayList;
+import java.util.List;
 
 public class AddFragment extends Fragment implements AdapterView.OnItemSelectedListener{
 
-    DatabaseHelper myDB;
+    DatabaseHelper db;
     EditText editTitle, editPage, editNr, editLyrics, editChords;
     Button btnDodaj;
     Spinner spinner2;
@@ -27,7 +26,7 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myDB = new DatabaseHelper(getActivity());
+        db = new DatabaseHelper(getActivity());
         View v = inflater.inflate(R.layout.fragment_add, container, false);
         editTitle = (EditText)v.findViewById(R.id.editText_title);
         spinner2 = (Spinner)v.findViewById(R.id.spinner2);
@@ -38,8 +37,7 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
         btnDodaj = (Button)v.findViewById(R.id.button_add);
         Dodaj();
 
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.songbooks, android.R.layout.simple_spinner_item);
-        spinner2.setAdapter(adapter);
+        loadSpinnerData();
         spinner2.setOnItemSelectedListener(this);
 
         return v;
@@ -65,7 +63,7 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
                         && editPage.getText().toString().trim().matches(regexStr) && editNr.getText().toString().trim().matches(regexStr)
                         && (editPage.getText().toString().length() != 0 || editNr.getText().toString().length() != 0))
                 {
-                    boolean isInserted = myDB.insertData(editTitle.getText().toString(), spinner2.getSelectedItem().toString(), editPage.getText().toString(),
+                    boolean isInserted = db.insertData(editTitle.getText().toString(), spinner2.getSelectedItem().toString(), editPage.getText().toString(),
                         editNr.getText().toString(), editLyrics.getText().toString(), editChords.getText().toString());
                 if(isInserted == true) {
                     Toast.makeText(getActivity(), "Piosenka została dodana.", Toast.LENGTH_LONG).show();
@@ -90,5 +88,15 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    private void loadSpinnerData() {
+
+        List<String> songbooks = db.getAllSongbooks();
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_spinner_item, songbooks);
+
+        spinner2.setAdapter(dataAdapter);
     }
 }
