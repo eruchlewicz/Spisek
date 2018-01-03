@@ -12,6 +12,7 @@
         android:layout_marginRight="25dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/img_thumbnail"
+        android:textColor="#333333"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -22,6 +23,7 @@
         android:layout_alignLeft="@+id/title"
         android:layout_below="@+id/title"
         android:layout_marginRight="25dp"
+        android:textColor="#333333"
         android:textSize="16sp" />
 
     <TextView
@@ -33,6 +35,7 @@
         android:layout_below="@+id/songbook"
         android:layout_marginBottom="10dp"
         android:text="Strona: "
+        android:textColor="#333333"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -46,6 +49,7 @@
         android:layout_marginRight="5dp"
         android:layout_toEndOf="@+id/text_page"
         android:layout_toRightOf="@+id/text_page"
+        android:textColor="#333333"
         android:textSize="16sp" />
 
     <TextView
@@ -58,6 +62,7 @@
         android:layout_toEndOf="@+id/page"
         android:layout_toRightOf="@+id/page"
         android:text="Nr: "
+        android:textColor="#333333"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -70,6 +75,7 @@
         android:layout_marginBottom="10dp"
         android:layout_toEndOf="@+id/text_number"
         android:layout_toRightOf="@+id/text_number"
+        android:textColor="#333333"
         android:textSize="16sp" />
 
 </android.widget.RelativeLayout>

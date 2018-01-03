@@ -53,7 +53,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja alleluja alleluja', 'Białostocki', '5', '', 'Panem jest wszechmogący Bóg', 'aeGa\n\nae\naG\nFGa');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja alleluja alleluja alleluja', 'Białostocki', '5', '', 'Niech zabrzmi Panu chwała w niebiosach', 'eDCHe\n\neDe\nGDe\nCDe\neheCH');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja alleluja amen amen', 'Białostocki', '6', '', 'On naszym Panem jest', 'aGea\n\nG\na\nG\na\nG\na\nGea');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja chwalcie Pana u świątyni bram', 'Białostocki', '6', '', 'Wszystko, co żyje', 'DGDA\nDEGA,DGDA\nDEGA\n\nGAh\nAGAh');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja chwalcie Pana u świątyni bram', 'Białostocki', '6', '', 'Wszystko, co żyje', 'DGDA\nDEGA\nDGDA\nDEGA\n\nGAh\nAGAh');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja Glory alleluja', 'Białostocki', '7', '', 'Chwalmy Go', 'DhGA');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja wznieś pod niebo głos', 'Białostocki', '7', '', 'Pan dał chleba moc', 'GD\nDCaG\n\nCD\nGH7e\nCDGG7\nCD\nGH7e\naDG');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ani mój brat ani siostra', 'Białostocki', '7', '', '', 'DfisAh\neAD');");
