@@ -1,8 +1,11 @@
 package com.example.ewelina.spisek;
 
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -16,15 +19,18 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class SearchFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
+    private final int REQ_CODE_SPEECH_INPUT = 100;
     private ListView listView;
     private ListAdapter adapter;
     ArrayList<Song> songs;
@@ -35,6 +41,7 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
     Button btnWyswietl;
     Spinner spinner;
     String songbook;
+    ImageButton btnSpeak;
 
     public SearchFragment() {
     }
@@ -46,6 +53,7 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
         editSearchTitle = (EditText) v.findViewById(R.id.title_filter);
         spinner = (Spinner) v.findViewById(R.id.search_place);
         listView = (ListView) v.findViewById(R.id.listView);
+        btnSpeak = (ImageButton) v.findViewById(R.id.btnSpeak);
 
         loadSpinnerData();
         spinner.setOnItemSelectedListener(this);
@@ -54,6 +62,14 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
         songs = db.getData();
         adapter= new ListAdapter(getContext(),R.layout.row_item,songs);
         listView.setAdapter(adapter);
+
+        btnSpeak.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                promptSpeechInput();
+            }
+        });
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             public boolean onItemLongClick(AdapterView<?> parent, View v, final int position, long id) {
@@ -205,5 +221,40 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
                 android.R.layout.simple_spinner_item, songbooks);
 
         spinner.setAdapter(dataAdapter);
+    }
+
+    private void promptSpeechInput() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
+                "Say something");
+        try {
+            startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
+        } catch (ActivityNotFoundException a) {
+            Toast.makeText(getContext(),
+                    "Sorry! Your device doesn't support speech input",
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case REQ_CODE_SPEECH_INPUT: {
+                //resultCode == RESULT_OK &&
+                if (null != data) {
+
+                    ArrayList<String> result = data
+                            .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    editSearchTitle.setText(result.get(0));
+                }
+                break;
+            }
+
+        }
     }
 }

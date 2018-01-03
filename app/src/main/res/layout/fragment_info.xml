@@ -40,7 +40,8 @@
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="50dp"
+            android:paddingBottom="5dp">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -49,7 +50,7 @@
                 <EditText
                     android:id="@+id/add_songbook"
                     android:layout_width="185dp"
-                    android:layout_height="40dp"
+                    android:layout_height="42dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
@@ -61,8 +62,8 @@
                 <Button
                     android:id="@+id/button_add_songbook"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_height="42dp"
+                    android:layout_marginBottom="5dp"
                     android:background="#5fcb34"
                     android:text="Dodaj"
                     android:textColor="@android:color/white"

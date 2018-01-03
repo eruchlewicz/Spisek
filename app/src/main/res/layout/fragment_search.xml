@@ -31,21 +31,42 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             android:paddingStart="5dp"
+            android:paddingLeft="5dp"
             android:paddingTop="10dp"
             android:text="Podaj tytuł:"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/title_filter"
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginStart="15dp"
-            android:ems="10"
-            android:inputType="textPersonName" />
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/title_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <ImageButton
+                    android:id="@+id/btnSpeak"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    android:src="@android:drawable/presence_audio_online" />
+            </TableRow>
+
+        </TableLayout>
 
         <Spinner
             android:id="@+id/search_place"

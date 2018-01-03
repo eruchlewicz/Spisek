@@ -1701,6 +1701,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public Integer deleteSongbook(String title) {
         SQLiteDatabase db = this.getWritableDatabase();
         String where = "title='"+title+"'";
+        String where2 = "place='"+title+"'";
+        db.delete(TABLE_NAME, where2, null);
         return db.delete(TABLE_NAME2, where, null);
     }
 
