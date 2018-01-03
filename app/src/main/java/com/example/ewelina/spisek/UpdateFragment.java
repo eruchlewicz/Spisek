@@ -152,7 +152,7 @@ public class UpdateFragment extends Fragment implements AdapterView.OnItemSelect
         List<String> songbooks = db.getAllSongbooks();
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(getActivity(),
-                android.R.layout.simple_spinner_item, songbooks);
+                android.R.layout.simple_spinner_dropdown_item, songbooks);
 
         songbook.setAdapter(dataAdapter);
     }

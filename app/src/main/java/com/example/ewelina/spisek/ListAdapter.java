@@ -60,8 +60,10 @@ public class ListAdapter extends ArrayAdapter<Song> {
         Song individualSong= data.get(position);
         holder.title.setText(individualSong.getTitle());
         holder.songbook.setText(individualSong.getSongbook());
-        holder.page.setText(individualSong.getPage());
-        holder.number.setText(individualSong.getNumber());
+        if(individualSong.getPage().length()==0) holder.page.setText("-");
+        else holder.page.setText(individualSong.getPage());
+        if(individualSong.getNumber().length()==0) holder.number.setText("-");
+        else holder.number.setText(individualSong.getNumber());
 
         return convertView;
     }
