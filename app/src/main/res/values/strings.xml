@@ -2,17 +2,5 @@
     <string name="app_name">Spisek</string>
     <string name="title_home">Wyszukaj</string>
     <string name="title_add">Dodaj</string>
-    <string name="title_info">Usuń</string>
     <string name="title_songbook">Śpiewniki</string>
-
-    <string-array name="songbooks">
-        <item></item>
-        <item>Przymierzowy</item>
-        <item>Pomarańczowy segregator</item>
-        <item>Niebieski Oli Ptaszyńskiej</item>
-        <item>Białostocki</item>
-        <item>Muzykolekcje</item>
-        <item>Nuty</item>
-    </string-array>
-
 </resources>

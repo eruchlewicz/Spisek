@@ -1,12 +1,14 @@
 package com.example.ewelina.spisek;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,12 +53,32 @@ public class SongbookFragment extends Fragment implements AdapterView.OnItemSele
         Dodaj();
 
         songbookList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id) {
-                delString = songbooks.get(Integer.valueOf(String.valueOf(id)));
-                db.deleteSongbook(delString);
-                if(db.deleteSongbook(delString) == 0) Toast.makeText(getContext(), "Śpiewnik został usunięty.", Toast.LENGTH_LONG).show();
-                dataAdapter.remove(dataAdapter.getItem(position));
-                dataAdapter.notifyDataSetChanged();
+            public boolean onItemLongClick(AdapterView<?> parent, View v, final int position,final long id) {
+                final AlertDialog.Builder dialogDelete = new AlertDialog.Builder(getActivity());
+
+                dialogDelete.setTitle("Uwaga");
+                dialogDelete.setMessage("Czy na pewno chcesz usunąć ten śpiewnik?");
+                dialogDelete.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        delString = songbooks.get(Integer.valueOf(String.valueOf(id)));
+                        if(delString.length()!=0){
+                            db.deleteSongbook(delString);
+                            if(db.deleteSongbook(delString) == 0) Toast.makeText(getContext(), "Śpiewnik został usunięty.", Toast.LENGTH_LONG).show();
+                            dataAdapter.remove(dataAdapter.getItem(position));
+                            dataAdapter.notifyDataSetChanged();
+                        }
+                    }
+                });
+
+                dialogDelete.setNegativeButton("Anuluj", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                dialogDelete.show();
+
                 return true;
             }
         });

@@ -29,7 +29,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_9 = "TITLE";
 
     public DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, 3);
+        super(context, DATABASE_NAME, null, 2);
     }
 
     @Override
@@ -1659,6 +1659,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         ArrayList<Song> product= new ArrayList<Song>();
         Cursor result = db.rawQuery("select * from "+ TABLE_NAME , null);
+        while(result.moveToNext()){
+            product.add( new Song(result.getString(result.getColumnIndex(COL_1)), result.getString(result.getColumnIndex(COL_2)),
+                    result.getString(result.getColumnIndex(COL_3)),result.getString(result.getColumnIndex(COL_4)),
+                    result.getString(result.getColumnIndex(COL_5)),result.getString(result.getColumnIndex(COL_6)),
+                    result.getString(result.getColumnIndex(COL_7))));
+        }
+        return product;
+    }
+
+    public ArrayList<Song> getFilteredData(String word, String songbook) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<Song> product= new ArrayList<Song>();
+        Cursor result;
+        if(songbook.length()>0 && word.length()>0) {
+            result = db.rawQuery("select * from " + TABLE_NAME + " where place like '" + songbook + "' and title like '%" + word + "%' or lyrics like '%" + word + "%'", null);
+        }
+        else if(word.length()>0) result = db.rawQuery("select * from " + TABLE_NAME + " where title like '%" + word + "%' or lyrics like '%" + word + "%'", null);
+        else if(songbook.length()>0) result = db.rawQuery("select * from " + TABLE_NAME + " where place like '" + songbook + "'", null);
+        else result = db.rawQuery("select * from " + TABLE_NAME, null);
         while(result.moveToNext()){
             product.add( new Song(result.getString(result.getColumnIndex(COL_1)), result.getString(result.getColumnIndex(COL_2)),
                     result.getString(result.getColumnIndex(COL_3)),result.getString(result.getColumnIndex(COL_4)),

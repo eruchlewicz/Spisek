@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.action_add:
                         fragment = new AddFragment();
                         break;
-                    case R.id.action_info:
+                    case R.id.action_songbooks:
                         fragment = new SongbookFragment();
                         break;
                 }
