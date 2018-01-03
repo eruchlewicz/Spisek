@@ -30,15 +30,14 @@ import java.util.Locale;
 
 public class SearchFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
+    private static final int RESULT_OK = -1;
     private final int REQ_CODE_SPEECH_INPUT = 100;
     private ListView listView;
     private ListAdapter adapter;
     ArrayList<Song> songs;
-    Cursor cursor;
     public Integer selected_id = null;
     DatabaseHelper db;
     EditText editSearchTitle;
-    Button btnWyswietl;
     Spinner spinner;
     String songbook;
     ImageButton btnSpeak;
@@ -245,10 +244,9 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
 
         switch (requestCode) {
             case REQ_CODE_SPEECH_INPUT: {
-                //resultCode == RESULT_OK &&
-                if (null != data) {
-
-                    ArrayList<String> result = data
+                ArrayList<String> result;
+                if (resultCode == RESULT_OK && null != data) {
+                    result = data
                             .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     editSearchTitle.setText(result.get(0));
                 }

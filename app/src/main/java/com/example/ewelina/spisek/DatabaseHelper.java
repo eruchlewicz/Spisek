@@ -1673,8 +1673,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ArrayList<Song> product= new ArrayList<Song>();
         Cursor result;
         if(songbook.length()>0 && word.length()>0) {
-            result = db.rawQuery("select * from " + TABLE_NAME + " where place like '" + songbook + "' and title like '%" + word + "%' or lyrics like '%" + word + "%'", null);
-        }
+            result = db.rawQuery("select * from " + TABLE_NAME + " where place like '" + songbook + "' and (title like '%" + word + "%' or lyrics like '%" + word + "%')", null);        }
         else if(word.length()>0) result = db.rawQuery("select * from " + TABLE_NAME + " where title like '%" + word + "%' or lyrics like '%" + word + "%'", null);
         else if(songbook.length()>0) result = db.rawQuery("select * from " + TABLE_NAME + " where place like '" + songbook + "'", null);
         else result = db.rawQuery("select * from " + TABLE_NAME, null);
