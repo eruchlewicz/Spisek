@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_home">Search</string>
+    <string name="title_add">Add</string>
+    <string name="title_songbook">Songbooks</string>
+    <string name="title">Title</string>
+    <string name="songbook">Songbook</string>
+    <string name="page">Page</string>
+    <string name="number">Number</string>
+    <string name="lyrics">Lyrics</string>
+    <string name="chords">Chords</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_edit">Update</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="page1">"Page: "</string>
+    <string name="number1">"Number: "</string>
+    <string name="song_not_added">Song not added.</string>
+    <string name="song_added">Song added.</string>
+    <string name="add_page">Enter page number</string>
+    <string name="add_number">Enter song number</string>
+    <string name="title_required">Title is required!</string>
+    <string name="songbook_required">Choose songbook!</string>
+    <string name="page_or_number">Enter page or song number!</string>
+    <string name="song_not_edited">Song not updated.</string>
+    <string name="song_edited">Song updated.</string>
+    <string name="if_sure_delete">Are you sure you want to remove this songbook?</string>
+    <string name="ok">OK</string>
+    <string name="warning">Warning</string>
+    <string name="songbook_deleted">Songbook deleted.</string>
+    <string name="songbook_added">Songbook added.</string>
+    <string name="songbook_not_added">Songbook not added.</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="pick_action">Choose action</string>
+    <string name="if_sure_delete_song">Are you sure you want to remove this song?</string>
+    <string name="song_not_deleted">Song not deleted.</string>
+    <string name="song_deleted">Song deleted.</string>
+    <string name="error">Error</string>
+    <string name="nothing_there">Nothing found.</string>
+    <string name="say_something">Say something</string>
+    <string name="sorry_not_supported">Sorry! Your device deosn\'t support speech recognizer</string>
+</resources>

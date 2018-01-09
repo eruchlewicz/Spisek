@@ -49,15 +49,15 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
             public void onClick(View v) {
                 String regexStr = "^[0-9]*$";
                 if(!editPage.getText().toString().trim().matches(regexStr))
-                    editPage.setError( "Podaj numer strony" );
+                    editPage.setError( getResources().getString(R.string.add_page) );
                 if(!editNr.getText().toString().trim().matches(regexStr))
-                    editNr.setError( "Podaj numer piosenki" );
+                    editNr.setError( getResources().getString(R.string.add_number) );
                 if( editTitle.getText().toString().length() == 0 )
-                    editTitle.setError( "Tytuł jest wymagany!" );
+                    editTitle.setError( getResources().getString(R.string.title_required) );
                 if( spinner2.getSelectedItem().toString().length() == 0 )
-                    Toast.makeText(getActivity(), "Wybierz śpiewnik!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), getResources().getString(R.string.songbook_required), Toast.LENGTH_LONG).show();
                 if (editPage.getText().toString().length() == 0 && editNr.getText().toString().length() == 0 )
-                    editTitle.setError("Wpisz stronę lub numer!");
+                    editTitle.setError(getResources().getString(R.string.page_or_number));
 
                 if( editTitle.getText().toString().length() > 0 && spinner2.getSelectedItem().toString().length() > 0
                         && editPage.getText().toString().trim().matches(regexStr) && editNr.getText().toString().trim().matches(regexStr)
@@ -66,7 +66,7 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
                     boolean isInserted = db.insertData(editTitle.getText().toString(), spinner2.getSelectedItem().toString(), editPage.getText().toString(),
                         editNr.getText().toString(), editLyrics.getText().toString(), editChords.getText().toString());
                 if(isInserted == true) {
-                    Toast.makeText(getActivity(), "Piosenka została dodana.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), getResources().getString(R.string.song_added), Toast.LENGTH_LONG).show();
 
                     Fragment fragment = new SearchFragment();
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
@@ -76,7 +76,7 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
                             .addToBackStack(null)
                             .commit();
                 }
-                else Toast.makeText(getActivity(), "Piosenka nie została dodana.", Toast.LENGTH_LONG).show();}
+                else Toast.makeText(getActivity(), getResources().getString(R.string.song_not_added), Toast.LENGTH_LONG).show();}
             }
         });
     }

@@ -56,22 +56,22 @@ public class SongbookFragment extends Fragment implements AdapterView.OnItemSele
             public boolean onItemLongClick(AdapterView<?> parent, View v, final int position,final long id) {
                 final AlertDialog.Builder dialogDelete = new AlertDialog.Builder(getActivity());
 
-                dialogDelete.setTitle("Uwaga");
-                dialogDelete.setMessage("Czy na pewno chcesz usunąć ten śpiewnik?");
-                dialogDelete.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                dialogDelete.setTitle(getResources().getString(R.string.warning));
+                dialogDelete.setMessage(getResources().getString(R.string.if_sure_delete));
+                dialogDelete.setPositiveButton(getResources().getString(R.string.ok), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         delString = songbooks.get(Integer.valueOf(String.valueOf(id)));
                         if(delString.length()!=0){
                             db.deleteSongbook(delString);
-                            if(db.deleteSongbook(delString) == 0) Toast.makeText(getContext(), "Śpiewnik został usunięty.", Toast.LENGTH_LONG).show();
+                            if(db.deleteSongbook(delString) == 0) Toast.makeText(getContext(), getResources().getString(R.string.songbook_deleted), Toast.LENGTH_LONG).show();
                             dataAdapter.remove(dataAdapter.getItem(position));
                             dataAdapter.notifyDataSetChanged();
                         }
                     }
                 });
 
-                dialogDelete.setNegativeButton("Anuluj", new DialogInterface.OnClickListener() {
+                dialogDelete.setNegativeButton(getResources().getString(R.string.btn_cancel), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -111,16 +111,16 @@ public class SongbookFragment extends Fragment implements AdapterView.OnItemSele
             @Override
             public void onClick(View v) {
                 if( edit_id.getText().toString().length() == 0 )
-                    edit_id.setError( "Tytuł jest wymagany!" );
+                    edit_id.setError( getResources().getString(R.string.title_required) );
 
                 if( edit_id.getText().toString().length() > 0)
                 {
                     boolean isInserted = db.insertSongbook(edit_id.getText().toString());
                     if(isInserted == true) {
                         loadSpinnerData();
-                        Toast.makeText(getActivity(), "Śpiewnik został dodany.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), getResources().getString(R.string.songbook_added), Toast.LENGTH_LONG).show();
                     }
-                    else Toast.makeText(getActivity(), "Śpiewnik nie został dodany.", Toast.LENGTH_LONG).show();}
+                    else Toast.makeText(getActivity(), getResources().getString(R.string.songbook_not_added), Toast.LENGTH_LONG).show();}
                 edit_id.setText(delString, TextView.BufferType.EDITABLE);
             }
         });

@@ -88,15 +88,15 @@ public class UpdateFragment extends Fragment implements AdapterView.OnItemSelect
             public void onClick(View v) {
                 String regexStr = "^[0-9]*$";
                 if (!editPage.getText().toString().trim().matches(regexStr))
-                    editPage.setError("Podaj stronę");
+                    editPage.setError(getResources().getString(R.string.add_page));
                 if (!editNr.getText().toString().trim().matches(regexStr))
-                    editNr.setError("Podaj numer");
+                    editNr.setError(getResources().getString(R.string.add_number));
                 if (editTitle.getText().toString().length() == 0)
-                    editTitle.setError("Tytuł jest wymagany!");
+                    editTitle.setError(getResources().getString(R.string.title_required));
                 if (editPage.getText().toString().length() == 0 && editNr.getText().toString().length() == 0 )
-                    editTitle.setError("Wpisz stronę lub numer!");
-                //if(songbook.getSelectedItem().toString().length() == 0 )
-                    //Toast.makeText(getActivity(), "Wybierz śpiewnik!", Toast.LENGTH_LONG).show();
+                    editTitle.setError(getResources().getString(R.string.page_or_number));
+                if(songbook.getSelectedItem().toString().length() == 0 )
+                    Toast.makeText(getActivity(), getResources().getString(R.string.songbook_required), Toast.LENGTH_LONG).show();
 
                 if (editTitle.getText().toString().length() > 0 && songbook.getSelectedItem().toString().length() > 0
                         && editPage.getText().toString().trim().matches(regexStr) && editNr.getText().toString().trim().matches(regexStr)
@@ -106,9 +106,9 @@ public class UpdateFragment extends Fragment implements AdapterView.OnItemSelect
                             editChords.getText().toString());
 
                     if (isUpdated > 0)
-                        Toast.makeText(getActivity(), "Piosenka została zaktualizowana.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), getResources().getString(R.string.song_edited), Toast.LENGTH_LONG).show();
                     else
-                        Toast.makeText(getActivity(), "Piosenka nie została zaktualizowana.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), getResources().getString(R.string.song_not_edited), Toast.LENGTH_LONG).show();
 
                     Fragment fragment = new SearchFragment();
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();

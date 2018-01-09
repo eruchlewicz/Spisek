@@ -34,7 +34,7 @@
         android:layout_alignStart="@+id/songbook"
         android:layout_below="@+id/songbook"
         android:layout_marginBottom="10dp"
-        android:text="Strona: "
+        android:text="@string/page1"
         android:textColor="#333333"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -61,7 +61,7 @@
         android:layout_marginBottom="10dp"
         android:layout_toEndOf="@+id/page"
         android:layout_toRightOf="@+id/page"
-        android:text="Nr: "
+        android:text="@string/number1"
         android:textColor="#333333"
         android:textSize="16sp"
         android:textStyle="bold" />

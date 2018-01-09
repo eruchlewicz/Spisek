@@ -1,56 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Spisek</string>
-    <string name="title_home">Wyszukaj</string>
-    <string name="title_add">Dodaj</string>
-    <string name="title_songbook">Śpiewniki</string>
-
-    <string name="title">Tytuł</string>
-    <string name="songbook">Śpiewnik</string>
-    <string name="page">Strona</string>
-    <string name="number">Numer</string>
-    <string name="lyrics">Tekst</string>
-    <string name="chords">Akordy</string>
-
     <string name="btn_add">Dodaj</string>
-    <string name="btn_edit">Zaktualizuj</string>
     <string name="btn_cancel">Anuluj</string>
-
-    <string name="page1">Strona: </string>
-    <string name="number1">Numer: </string>
-
+    <string name="btn_edit">Zaktualizuj</string>
+    <string name="chords">Akordy</string>
+    <string name="lyrics">Tekst</string>
+    <string name="number">Numer</string>
+    <string name="number1">"Numer: "</string>
+    <string name="page">Strona</string>
+    <string name="page1">"Strona: "</string>
+    <string name="songbook">Śpiewnik</string>
+    <string name="title">Tytuł</string>
+    <string name="title_add">Dodaj</string>
+    <string name="title_home">Wyszukaj</string>
+    <string name="title_songbook">Śpiewniki</string>
     <string name="song_not_added">Piosenka nie została dodana.</string>
     <string name="song_added">Piosenka została dodana.</string>
-
     <string name="add_page">Podaj numer strony</string>
     <string name="add_number">Podaj numer piosenki</string>
     <string name="title_required">Tytuł jest wymagany!</string>
     <string name="songbook_required">Wybierz śpiewnik!</string>
     <string name="page_or_number">Wpisz stronę lub numer!</string>
-
     <string name="song_not_edited">Piosenka nie została zaktualizowana.</string>
     <string name="song_edited">Piosenka została zaktualizowana.</string>
-
-    <string name="warning">Uwaga</string>
     <string name="if_sure_delete">Czy na pewno chcesz usunąć ten śpiewnik?</string>
     <string name="ok">OK</string>
-
+    <string name="warning">Uwaga</string>
     <string name="songbook_deleted">Śpiewnik został usunięty.</string>
-
-    <string name="songbook_not_added">Śpiewnik nie został dodany.</string>
     <string name="songbook_added">Śpiewnik został dodany.</string>
-
+    <string name="songbook_not_added">Śpiewnik nie został dodany.</string>
     <string name="edit">Edytuj</string>
     <string name="delete">Usuń</string>
     <string name="pick_action">Wybierz akcję</string>
     <string name="if_sure_delete_song">Czy na pewno chcesz usunąć tę piosenkę?</string>
-
     <string name="song_not_deleted">Piosenka nie została usunięta.</string>
     <string name="song_deleted">Piosenka została usunięta.</string>
-
-    <string name="nothing_there">Nic nie znaleziono.</string>
     <string name="error">Błąd</string>
-
+    <string name="nothing_there">Nic nie znaleziono.</string>
     <string name="say_something">Powiedz coś</string>
     <string name="sorry_not_supported">Przepraszamy! Twoje urządzenie nie wspiera rozpoznawania mowy</string>
-
 </resources>

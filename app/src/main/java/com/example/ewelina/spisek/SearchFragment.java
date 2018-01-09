@@ -73,10 +73,10 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             public boolean onItemLongClick(AdapterView<?> parent, View v, final int position, long id) {
 
-                CharSequence[] items = {"Edytuj", "Usuń"};
+                CharSequence[] items = {getResources().getString(R.string.edit), getResources().getString(R.string.delete)};
                 AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
 
-                dialog.setTitle("Wybierz akcję");
+                dialog.setTitle(getResources().getString(R.string.pick_action));
                 dialog.setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int item) {
@@ -99,20 +99,20 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
                             // delete
                             final AlertDialog.Builder dialogDelete = new AlertDialog.Builder(getActivity());
 
-                            dialogDelete.setTitle("Uwaga");
-                            dialogDelete.setMessage("Czy na pewno chcesz usunąć tę piosenkę?");
-                            dialogDelete.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            dialogDelete.setTitle(getResources().getString(R.string.warning));
+                            dialogDelete.setMessage(getResources().getString(R.string.if_sure_delete_song));
+                            dialogDelete.setPositiveButton(getResources().getString(R.string.ok), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     Song song = songs.get(position);
                                     db.deleteData(Integer.valueOf(song.getId()));
-                                    if(db.deleteData(Integer.valueOf(song.getId())) == 0) Toast.makeText(getContext(), "Piosenka została usunięta.", Toast.LENGTH_LONG).show();
+                                    if(db.deleteData(Integer.valueOf(song.getId())) == 0) Toast.makeText(getContext(), getResources().getString(R.string.song_deleted), Toast.LENGTH_LONG).show();
                                     adapter.remove(adapter.getItem(position));
                                     adapter.notifyDataSetChanged();
                                 }
                             });
 
-                            dialogDelete.setNegativeButton("Anuluj", new DialogInterface.OnClickListener() {
+                            dialogDelete.setNegativeButton(getResources().getString(R.string.btn_cancel), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.dismiss();
@@ -175,7 +175,7 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
                 String title = "";
                 Cursor res = db.viewData();
                 if(res.getCount() == 0) {
-                    showMessage("Błąd", "Nic nie znaleziono.");
+                    showMessage(getResources().getString(R.string.error), getResources().getString(R.string.nothing_there));
                     return;
                 }
                 StringBuffer buffer = new StringBuffer();
@@ -183,7 +183,7 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
                     if((res.getInt(0)==selected_id)) {
                         title = res.getString(1);
                         if(res.getString(6).length()!=0) {
-                            buffer.append("Akordy: \n\n" + res.getString(6) + "\n");}
+                            buffer.append(getResources().getString(R.string.chords) + ": \n\n" + res.getString(6) + "\n");}
                         buffer.append("\n");
                     }
                 }
@@ -228,12 +228,12 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
-                "Powiedz coś");
+                getResources().getString(R.string.say_something));
         try {
             startActivityForResult(intent, 10);
         } catch (ActivityNotFoundException a) {
             Toast.makeText(getActivity(),
-                    "Przepraszamy! Twoje urządzenie nie wspiera rozpoznawania mowy",
+                    getResources().getString(R.string.sorry_not_supported),
                     Toast.LENGTH_SHORT).show();
         }
     }
