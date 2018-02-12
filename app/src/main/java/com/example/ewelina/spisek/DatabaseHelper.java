@@ -44,6 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('Białostocki');");
         db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('Nuty');");
         db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('Muzykolekcje');");
+        db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('24 WLM Łomża');");
 
 //Białostocki
 
@@ -1606,6 +1607,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Śpiewajmy Panu Bogu śpiewajmy', 'Pomarańczowy segregator', '', '104', '', 'G');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Zmartwychwstał Pan zwycięstwa chwałą niebo brzmi (Baranek Królem jest)', 'Pomarańczowy segregator', '', '105', '', 'G');");
 
+//24 WLM Łomża
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja (Taize)', '24 WLM Łomża', '3', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kyrie (Bębenek)', '24 WLM Łomża', '4', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Sanctus (Bębenek)', '24 WLM Łomża', '5', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Agnus Dei (Bębenek)', '24 WLM Łomża', '6', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja (Pospieszalski)', '24 WLM Łomża', '7', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bonum est praestolari', '24 WLM Łomża', '8', '', 'Lm 3,26', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Boże Twa łaska', '24 WLM Łomża', '9', '', 'Tomalak', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Chrystus Pan karmi nas', '24 WLM Łomża', '10', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Cóż Ci Jezu damy', '24 WLM Łomża', '11', '', 'Tomalak', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Gloria Patri Orientalis', '24 WLM Łomża', '12', '', 'Tomalak', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezu Synu Dawida', '24 WLM Łomża', '12', '', 'VOX EREMI', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kim Ty jesteś Panie', '24 WLM Łomża', '13', '', '', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Maria vogliamo amarti', '24 WLM Łomża', '14', '', 'Tomalak', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Miłosierdzie', '24 WLM Łomża', '15', '', 'Ps 40', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Miłość Boża rozlana jest', '24 WLM Łomża', '16', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Nie lękajcie się (Kowalski)', '24 WLM Łomża', '17', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Serce o tym wie', '24 WLM Łomża', '18', '', 'Tomalak', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Stańcie się solą ziemi', '24 WLM Łomża', '19', '', 'Taize', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Twoje Ciało jest prawdziwym pokarmem', '24 WLM Łomża', '20', '', 'Tomalak', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Uwielbiam Twoje Imię', '24 WLM Łomża', '21', '', 'Tomalak', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wielkie są dzieła', '24 WLM Łomża', '22', '', 'Sykulski', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wołam do Ciebie Panie', '24 WLM Łomża', '23', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dzisiaj w Betlejem (Tomalak)', '24 WLM Łomża', '25', '', '', 'Ref: A2');");
     }
 
     @Override
@@ -1656,15 +1681,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public ArrayList<Song> getData() {
         SQLiteDatabase db = this.getReadableDatabase();
-        ArrayList<Song> product= new ArrayList<Song>();
+        ArrayList<Song> songs= new ArrayList<Song>();
         Cursor result = db.rawQuery("select * from "+ TABLE_NAME , null);
         while(result.moveToNext()){
-            product.add( new Song(result.getString(result.getColumnIndex(COL_1)), result.getString(result.getColumnIndex(COL_2)),
+            songs.add( new Song(result.getString(result.getColumnIndex(COL_1)), result.getString(result.getColumnIndex(COL_2)),
                     result.getString(result.getColumnIndex(COL_3)),result.getString(result.getColumnIndex(COL_4)),
                     result.getString(result.getColumnIndex(COL_5)),result.getString(result.getColumnIndex(COL_6)),
                     result.getString(result.getColumnIndex(COL_7))));
         }
-        return product;
+        return songs;
+    }
+
+    public Song getSong(Integer songId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<Song> songs= new ArrayList<Song>();
+        Cursor result = db.rawQuery("select * from "+ TABLE_NAME + " where id like '" + songId + "'", null);
+        while(result.moveToNext()){
+            songs.add( new Song(result.getString(result.getColumnIndex(COL_1)), result.getString(result.getColumnIndex(COL_2)),
+                    result.getString(result.getColumnIndex(COL_3)),result.getString(result.getColumnIndex(COL_4)),
+                    result.getString(result.getColumnIndex(COL_5)),result.getString(result.getColumnIndex(COL_6)),
+                    result.getString(result.getColumnIndex(COL_7))));
+        }
+        if(!songs.isEmpty()) return songs.get(0);
+        else return null;
     }
 
     public ArrayList<Song> getFilteredData(String word, String songbook) {

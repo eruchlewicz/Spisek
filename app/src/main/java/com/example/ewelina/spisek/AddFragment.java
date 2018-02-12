@@ -57,7 +57,7 @@ public class AddFragment extends Fragment implements AdapterView.OnItemSelectedL
                 if( spinner2.getSelectedItem().toString().length() == 0 )
                     Toast.makeText(getActivity(), getResources().getString(R.string.songbook_required), Toast.LENGTH_LONG).show();
                 if (editPage.getText().toString().length() == 0 && editNr.getText().toString().length() == 0 )
-                    editTitle.setError(getResources().getString(R.string.page_or_number));
+                    editPage.setError(getResources().getString(R.string.page_or_number));
 
                 if( editTitle.getText().toString().length() > 0 && spinner2.getSelectedItem().toString().length() > 0
                         && editPage.getText().toString().trim().matches(regexStr) && editNr.getText().toString().trim().matches(regexStr)

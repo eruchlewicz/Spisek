@@ -83,6 +83,9 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
                         if (item == 0) {
                             // update
                             selected_id = position;
+                            Song song = songs.get(selected_id);
+                            selected_id = Integer.valueOf(song.getId());
+
                             Bundle bundle = new Bundle();
                             bundle.putInt("selected_id",selected_id);
                             UpdateFragment fragment = new UpdateFragment();

@@ -69,7 +69,7 @@ public class UpdateFragment extends Fragment implements AdapterView.OnItemSelect
         songbook.setOnItemSelectedListener(this);
 
         songs = db.getData();
-        Song song = songs.get(selected);
+        Song song = db.getSong(selected);
         selected = Integer.valueOf(song.getId());
 
         editTitle.setText(song.getTitle(), TextView.BufferType.EDITABLE);
@@ -94,7 +94,7 @@ public class UpdateFragment extends Fragment implements AdapterView.OnItemSelect
                 if (editTitle.getText().toString().length() == 0)
                     editTitle.setError(getResources().getString(R.string.title_required));
                 if (editPage.getText().toString().length() == 0 && editNr.getText().toString().length() == 0 )
-                    editTitle.setError(getResources().getString(R.string.page_or_number));
+                    editPage.setError(getResources().getString(R.string.page_or_number));
                 if(songbook.getSelectedItem().toString().length() == 0 )
                     Toast.makeText(getActivity(), getResources().getString(R.string.songbook_required), Toast.LENGTH_LONG).show();
 
