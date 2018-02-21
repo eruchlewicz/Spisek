@@ -1498,6 +1498,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Cała ziemio wołaj z radości na cześć Pana', 'Nuty', '113', '', '', '');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Życie jesteś chwilą Bębenek', 'Nuty', '114', '', '', 'G');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezu miłości Twej Pałka', 'Nuty', '115', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Błogosławione serca', 'Nuty', '116', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niepokalane Serce Maryi', 'Nuty', '117', '', 'Pałka', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Stabat Mater Speciosa', 'Nuty', '118', '', 'Bębenek', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Uwielbiamy Cię wychwalamy Cię', 'Nuty', '119', '', 'Pałka', 'F');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Raduj się świecie', 'Nuty', '120', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pieśń o nadziei', 'Nuty', '122', '', 'W Swoim wielkim miłosierdziu', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Gdy się Krystus narodził', 'Nuty', '124', '', 'Gdy się Chrystus narodził', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dzieciątko się narodziło', 'Nuty', '125', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Mędrcy świata', 'Nuty', '126', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Exaudi Deus (Wysłuchaj Boże)', 'Nuty', '128', '', 'Pałka', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Modlitwa o skruchę', 'Nuty', '129', '', 'Stwórz o mój Boże Psalm 51', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Chrystus Pan karmi nas', 'Nuty', '130', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przywołaj mnie Panie', 'Nuty', '131', '', 'Mów do mego serca', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ja wiem w kogo wierzę', 'Nuty', '132', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przyjdź dotknij mnie', 'Nuty', '133', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kantyk Mojżesza', 'Nuty', '134', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezu ufam Tobie - zmiłuj się nade mną', 'Nuty', '135', '', '', '');");
 
 //pomaranczowy
 
