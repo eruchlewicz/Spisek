@@ -43,8 +43,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('Niebieski Oli Ptaszyńskiej');");
         db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('Białostocki');");
         db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('Nuty');");
-        db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('Muzykolekcje');");
+        db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('Muzykolekcje 2017');");
         db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('24 WLM Łomża');");
+        db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('Przystanek Jezus');");
+        db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('Akademickie Warsztaty');");
+        db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('Muzykolekcje 2018');");
+        db.execSQL("INSERT INTO " + TABLE_NAME2 + "(TITLE) VALUES ('Białystok Warsztaty 2018');");
 
 //Białostocki
 
@@ -1207,43 +1211,43 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wystarczy siąść u Twych stóp Jezu', 'Przymierzowy', '', '575', '', '');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Z Tobą ciemność nie będzie ciemna', 'Przymierzowy', '', '576', '', '');");
 
-//Muzykolekcje
+//Muzykolekcje 2017
 
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kyrie (Panie) Kowalski', 'Muzykolekcje', '11', '', '', 'brak');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Agnus Dei (Baranku Boży) Kowalski', 'Muzykolekcje', '11', '', '', 'brak');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Sanctus (Święty) Kowalski', 'Muzykolekcje', '12', '', '', 'brak');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Gloria', 'Muzykolekcje', '13', '', '', 'A');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja Jamneńskie', 'Muzykolekcje', '14', '', '', 'fis');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja wielkanocne Kowalski', 'Muzykolekcje', '15', '', '', 'brak');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja (Ps 148) Kowalski', 'Muzykolekcje', '16', '', 'Niech zabrzmi Panu chwała w niebiosach', 'a');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Wietrze Kowalski', 'Muzykolekcje', '17', '', '', 'E');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty przyjdź Pocieszycielu przyjdź Pałka', 'Muzykolekcje', '18', '', '', 'F');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty wołam przyjdź', 'Muzykolekcje', '21', '', '', 'D');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('ITE (Idźcie) MISSA MARTYRUM Pałka', 'Muzykolekcje', '22', '', '', 'd');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Swojego Ducha Panie wylej na nas dziś', 'Muzykolekcje', '27', '', '', 'D');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Modlitwa do Ducha Świętego (Veni Sancte Spiritus) Pałka', 'Muzykolekcje', '28', '', '', 'D');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pan wywyższony nasz Król wywyższony', 'Muzykolekcje', '34', '', '', 'F');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty napełnij serce Kowalski', 'Muzykolekcje', '35', '', '', 'A');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Uwielbiam Cię Abba Pałka', 'Muzykolekcje', '36', '', '', 'G');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dotyk Ognia (Oto ja poślij mnie)', 'Muzykolekcje', '36', '', '', 'D');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kto odczuwa pragnienie niech przyjdzie Bębenek', 'Muzykolekcje', '37', '', '', 'g');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty Tchnienie Ojca Dawco życia', 'Muzykolekcje', '38', '', '', 'C');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Błogosław Duszo moja Pana', 'Muzykolekcje', '39', '', '', 'E');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Godzien o godzien jest Bóg', 'Muzykolekcje', '42', '', 'Godzien o godzien nasz Bóg', 'G');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus zwyciężył to wykonało się', 'Muzykolekcje', '43', '', '', 'd');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Królu Niebieski Pocieszycielu', 'Muzykolekcje', '44', '', '', 'brak');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Na Komunię (Kto spożywa Moje Ciało) Pałka', 'Muzykolekcje', '45', '', '', 'brak');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niech nas ogarnie (Łaska Pana) Pałka', 'Muzykolekcje', '45', '', '', 'brak');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Na wieki będę wyśpiewywał Twe miłosierdzie Pałka', 'Muzykolekcje', '46', '', '', 'a');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niechaj zstąpi Duch Twój', 'Muzykolekcje', '46', '', '', 'e');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Płomień Miłości (Niechaj Płomień)', 'Muzykolekcje', '47', '', '', 'e');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pomódl się Miriam', 'Muzykolekcje', '48', '', '', 'D7+');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przychodzisz Panie mimo drzwi zamkniętych', 'Muzykolekcje', '49', '', '', 'F');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wiązanka pieśni izraelskich', 'Muzykolekcje', '50', '', '', 'brak');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wzywam Cię Duchu przyjdź', 'Muzykolekcje', '51', '', '', 'A');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('O Stworzycielu Duchu przyjdź', 'Muzykolekcje', '52', '', 'Hymn do Ducha Świętego', 'brak');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przybądź Duchu Święty (Sekwencja)', 'Muzykolekcje', '53', '', 'Sekwencja do Ducha Świętego', 'brak');");
-        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ciebie Boga wysławiamy', 'Muzykolekcje', '54', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kyrie (Panie) Kowalski', 'Muzykolekcje 2017', '11', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Agnus Dei (Baranku Boży) Kowalski', 'Muzykolekcje 2017', '11', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Sanctus (Święty) Kowalski', 'Muzykolekcje 2017', '12', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Gloria', 'Muzykolekcje 2017', '13', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja Jamneńskie', 'Muzykolekcje 2017', '14', '', '', 'fis');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja wielkanocne Kowalski', 'Muzykolekcje 2017', '15', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja (Ps 148) Kowalski', 'Muzykolekcje 2017', '16', '', 'Niech zabrzmi Panu chwała w niebiosach', 'a');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Wietrze Kowalski', 'Muzykolekcje 2017', '17', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty przyjdź Pocieszycielu przyjdź Pałka', 'Muzykolekcje 2017', '18', '', '', 'F');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty wołam przyjdź', 'Muzykolekcje 2017 2017', '21', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('ITE (Idźcie) MISSA MARTYRUM Pałka', 'Muzykolekcje 2017 2017', '22', '', '', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Swojego Ducha Panie wylej na nas dziś', 'Muzykolekcje 2017', '27', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Modlitwa do Ducha Świętego (Veni Sancte Spiritus) Pałka', 'Muzykolekcje 2017', '28', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pan wywyższony nasz Król wywyższony', 'Muzykolekcje 2017', '34', '', '', 'F');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty napełnij serce Kowalski', 'Muzykolekcje 2017', '35', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Uwielbiam Cię Abba Pałka', 'Muzykolekcje 2017', '36', '', '', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dotyk Ognia (Oto ja poślij mnie)', 'Muzykolekcje 2017', '36', '', '', 'D');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kto odczuwa pragnienie niech przyjdzie Bębenek', 'Muzykolekcje 2017', '37', '', '', 'g');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty Tchnienie Ojca Dawco życia', 'Muzykolekcje 2017', '38', '', '', 'C');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Błogosław Duszo moja Pana', 'Muzykolekcje 2017', '39', '', '', 'E');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Godzien o godzien jest Bóg', 'Muzykolekcje 2017', '42', '', 'Godzien o godzien nasz Bóg', 'G');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus zwyciężył to wykonało się', 'Muzykolekcje 2017', '43', '', '', 'd');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Królu Niebieski Pocieszycielu', 'Muzykolekcje 2017', '44', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Na Komunię (Kto spożywa Moje Ciało) Pałka', 'Muzykolekcje 2017', '45', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niech nas ogarnie (Łaska Pana) Pałka', 'Muzykolekcje 2017', '45', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Na wieki będę wyśpiewywał Twe miłosierdzie Pałka', 'Muzykolekcje 2017', '46', '', '', 'a');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niechaj zstąpi Duch Twój', 'Muzykolekcje 2017', '46', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Płomień Miłości (Niechaj Płomień)', 'Muzykolekcje 2017', '47', '', '', 'e');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pomódl się Miriam', 'Muzykolekcje 2017', '48', '', '', 'D7+');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przychodzisz Panie mimo drzwi zamkniętych', 'Muzykolekcje 2017', '49', '', '', 'F');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wiązanka pieśni izraelskich', 'Muzykolekcje 2017', '50', '', '', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wzywam Cię Duchu przyjdź', 'Muzykolekcje 2017', '51', '', '', 'A');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('O Stworzycielu Duchu przyjdź', 'Muzykolekcje 2017', '52', '', 'Hymn do Ducha Świętego', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przybądź Duchu Święty (Sekwencja)', 'Muzykolekcje 2017', '53', '', 'Sekwencja do Ducha Świętego', 'brak');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ciebie Boga wysławiamy', 'Muzykolekcje 2017', '54', '', '', 'brak');");
 
 //Oli
 
@@ -1648,6 +1652,153 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wielkie są dzieła', '24 WLM Łomża', '22', '', 'Sykulski', 'brak');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wołam do Ciebie Panie', '24 WLM Łomża', '23', '', '', 'e');");
         db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dzisiaj w Betlejem (Tomalak)', '24 WLM Łomża', '25', '', '', 'Ref: A2');");
+
+// Przystanek Jezus
+
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja Ps 148', 'Przystanek Jezus', '1', '', 'Niech zabrzmi Panu', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja (Kowalski)', 'Przystanek Jezus', '2', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Błogosławię Cię', 'Przystanek Jezus', '3', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Daj mi tego chleba Panie', 'Przystanek Jezus', '4', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kyrie eleison (Kowalski)', 'Przystanek Jezus', '5', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Agnus Dei (Kowalski)', 'Przystanek Jezus', '5', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezu ufam Tobie (Pałka)', 'Przystanek Jezus', '6', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dobry Pasterzu', 'Przystanek Jezus', '8', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Łaska Pana (Niech nas ogarnie)', 'Przystanek Jezus', '9', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Na komunię (Kto spożywa)', 'Przystanek Jezus', '10', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Sanctus (Kowalski)', 'Przystanek Jezus', '11', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niech będzie chwała', 'Przystanek Jezus', '12', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('W Tonie żyję', 'Przystanek Jezus', '14', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bo Bóg tak ukochał nas', 'Przystanek Jezus', '15', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Będziemy tańczyć', 'Przystanek Jezus', '16', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Czcijmy Jezusa', 'Przystanek Jezus', '18', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Chrystus Pan Boży Syn', 'Przystanek Jezus', '20', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Daję wam Ciało Swe', 'Przystanek Jezus', '22', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty napełnij serce', 'Przystanek Jezus', '23', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Duchu Święty wołam przyjdź', 'Przystanek Jezus', '24', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Schowaj mnie', 'Przystanek Jezus', '25', '', 'Kiedy fale mórz, Ja ufam Ci', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Hosanna (mam moc)', 'Przystanek Jezus', '26', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jesteśmy jednym ciałem', 'Przystanek Jezus', '28', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezu jesteś tu (Chwała)', 'Przystanek Jezus', '29', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus Chrystus to Panów Pan', 'Przystanek Jezus', '30', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus zwyciężył', 'Przystanek Jezus', '31', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus najwyższe Imię', 'Przystanek Jezus', '32', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus Święty namaszczony Pan', 'Przystanek Jezus', '33', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Każdy spragniony', 'Przystanek Jezus', '34', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pan wywyższony', 'Przystanek Jezus', '35', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niech cała ziemia', 'Przystanek Jezus', '38', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pieśń słoneczna', 'Przystanek Jezus', '40', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Powstań i żyj', 'Przystanek Jezus', '42', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przymnóż nam wiary', 'Przystanek Jezus', '43', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('To Król nasz', 'Przystanek Jezus', '47', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ty jesteś Panie Bogiem łaski', 'Przystanek Jezus', '49', '', '', '');");
+
+// Akademickie
+
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja wielkanocne', 'Akademickie Warsztaty', '1', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja (Ptaszyńska)', 'Akademickie Warsztaty', '2', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja Jezus żyje', 'Akademickie Warsztaty', '3', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Deus miserere mei', 'Akademickie Warsztaty', '4', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dobry jest Pan dla ufnych', 'Akademickie Warsztaty', '5', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dobry Pasterzu', 'Akademickie Warsztaty', '6', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezu ufam Tobie (Jaworska)', 'Akademickie Warsztaty', '7', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Miłosierny i dobry jest Pan', 'Akademickie Warsztaty', '8', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('O Hostio Święta', 'Akademickie Warsztaty', '9', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pokój wam (Pałka)', 'Akademickie Warsztaty', '10', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Regina coeli jubila', 'Akademickie Warsztaty', '11', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Stańcie się solą', 'Akademickie Warsztaty', '12', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ty jesteś Panie Bogiem łaski', 'Akademickie Warsztaty', '13', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wielkie są dzieła', 'Akademickie Warsztaty', '17', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Witaj Miłosierny Jezu', 'Akademickie Warsztaty', '18', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wołam Cię Duchu Święty (Ptaszyńska)', 'Akademickie Warsztaty', '19', '', '', '');");
+
+// Muzykolekcje 2018
+
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kyrie (Missa Martyrum - Pałka)', 'Muzykolekcje 2018', '9', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Sanctus (Missa Martyrum - Pałka)', 'Muzykolekcje 2018', '12', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Agnus Dei (Missa Martyrum - Pałka)', 'Muzykolekcje 2018', '13', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja Jamneńskie (Sykulski)', 'Muzykolekcje 2018', '10', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja Radosne (Pałka)', 'Muzykolekcje 2018', '11', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Amen (kończące modlitwę eucharystyczną)', 'Muzykolekcje 2018', '13', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja (Ps 148)', 'Muzykolekcje 2018', '14', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ave verum', 'Muzykolekcje 2018', '15', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Będę śpiewał Tobie', 'Muzykolekcje 2018', '15', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Będziemy tańczyć (Jeruzalem)', 'Muzykolekcje 2018', '16', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Chleb Niebiański (Hymn Etiopski)', 'Muzykolekcje 2018', '17', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Czcijmy Jezusa', 'Muzykolekcje 2018', '18', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Dotyk Ognia (Oto ja poślij mnie)', 'Muzykolekcje 2018', '18', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Godzien o godzien', 'Muzykolekcje 2018', '19', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Hosanna na niebiosach', 'Muzykolekcje 2018', '20', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jesteśmy piękni', 'Muzykolekcje 2018', '21', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jeśli ktoś jest spragniony (Pałka)', 'Muzykolekcje 2018', '20', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus najwyższe Imię', 'Muzykolekcje 2018', '22', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus zwyciężył', 'Muzykolekcje 2018', '23', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Laudate Dominum', 'Muzykolekcje 2018', '24', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Miłujcie się wzajemnie', 'Muzykolekcje 2018', '25', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Na Komunię', 'Muzykolekcje 2018', '26', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niech nas ogarnie', 'Muzykolekcje 2018', '26', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niechaj Cię Panie (Ps 145)', 'Muzykolekcje 2018', '27', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pan jest mocą swojego ludu', 'Muzykolekcje 2018', '28', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pieśń o nadziei', 'Muzykolekcje 2018', '27', '', 'W swoim wielkim miłosierdziu', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Pieśń tęsknoty', 'Muzykolekcje 2018', '28', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Przychodzisz Panie mimo drzwi zamkniętych', 'Muzykolekcje 2018', '29', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Serce wielkie nam daj', 'Muzykolekcje 2018', '30', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Światłem i zbawieniem mym', 'Muzykolekcje 2018', '31', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Twoje Słowo jest lampą', 'Muzykolekcje 2018', '32', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wielbić Pana chcę', 'Muzykolekcje 2018', '32', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wzywam Cię Duchu przyjdź', 'Muzykolekcje 2018', '33', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Zaprowadź mnie tam', 'Muzykolekcje 2018', '34', '', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Zbliżam się w pokorze', 'Muzykolekcje 2018', '35', '', '', '');");
+
+// Białystok Warsztaty 2018
+
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('O Stworzycielu Duchu przyjdź', 'Białystok Warsztaty 2018', '5', '1', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kyrie', 'Białystok Warsztaty 2018', '6', '2', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Sanctus', 'Białystok Warsztaty 2018', '7', '3', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Agnus Dei', 'Białystok Warsztaty 2018', '9', '4', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja wielkanocne', 'Białystok Warsztaty 2018', '10', '5', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Attende Domine', 'Białystok Warsztaty 2018', '11', '6', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Maryjo pełna łaski', 'Białystok Warsztaty 2018', '13', '7', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ty przez Królową', 'Białystok Warsztaty 2018', '14', '8', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Virgo Maria', 'Białystok Warsztaty 2018', '15', '9', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Zawitaj Królowo Różańca Świętego', 'Białystok Warsztaty 2018', '16', '10', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wierzymy w Ciebie Chryste', 'Białystok Warsztaty 2018', '17', '11', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niepokalane Serce Maryi', 'Białystok Warsztaty 2018', '18', '12', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ty jesteś Panie Bogiem łaski', 'Białystok Warsztaty 2018', '19', '13', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Uwielbiam Cię Abba', 'Białystok Warsztaty 2018', '23', '14', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Uwielbiamy Cię wychwalamy Cię', 'Białystok Warsztaty 2018', '24', '15', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Ave Regina Caelorum', 'Białystok Warsztaty 2018', '25', '16', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Na zaśnięcie (Już się anieli weselą)', 'Białystok Warsztaty 2018', '26', '17', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Matko Pomocy', 'Białystok Warsztaty 2018', '27', '18', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niech Ciało Twe Chryste mnie strzeże', 'Białystok Warsztaty 2018', '28', '19', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Stabat Mater Sepciosa', 'Białystok Warsztaty 2018', '29', '20', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Tobie wznawiamy Panno', 'Białystok Warsztaty 2018', '30', '21', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Kyrie eleison (Missa de Misericordia - Kowalski)', 'Białystok Warsztaty 2018', '31', '22', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Sanctus (Missa de Misericordia - Kowalski)', 'Białystok Warsztaty 2018', '32', '23', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Agnus Dei (Missa de Misericordia - Kowalski)', 'Białystok Warsztaty 2018', '34', '24', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja (Bębenek)', 'Białystok Warsztaty 2018', '35', '25', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Alleluja', 'Białystok Warsztaty 2018', '36', '26', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Chwal Jerozolimo Pana', 'Białystok Warsztaty 2018', '37', '27', 'Ps 147', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Magnificat', 'Białystok Warsztaty 2018', '39', '28', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Matko najlepsza', 'Białystok Warsztaty 2018', '40', '29', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Obudź mnie bym szukał Ciebie', 'Białystok Warsztaty 2018', '42', '30', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Różne są dary łaski', 'Białystok Warsztaty 2018', '43', '31', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Wszystkie nasze dzienne sprawy', 'Białystok Warsztaty 2018', '44', '32', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Cały świat niech śpiewa tę pieśń', 'Białystok Warsztaty 2018', '45', '33', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jeśli ktoś jest spragniony', 'Białystok Warsztaty 2018', '46', '34', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Niech będzie chwała i cześć', 'Białystok Warsztaty 2018', '47', '35', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('O Piękności niestworzona', 'Białystok Warsztaty 2018', '49', '36', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Błogosławię Cię', 'Białystok Warsztaty 2018', '51', '37', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Idźcie na cały świat', 'Białystok Warsztaty 2018', '52', '38', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Jezus najwyższe Imię', 'Białystok Warsztaty 2018', '53', '39', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Tantum Ergo', 'Białystok Warsztaty 2018', '54', '40', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Witaj Miłosierny Jezu', 'Białystok Warsztaty 2018', '55', '41', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('O Matko Bolesławo', 'Białystok Warsztaty 2018', '56', '42', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Bolesławo prowadź', 'Białystok Warsztaty 2018', '57', '43', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Sub tuum praesidium', 'Białystok Warsztaty 2018', '59', '44', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Tunc invocabis', 'Białystok Warsztaty 2018', '60', '45', '', '');");
+        db.execSQL("INSERT INTO " + TABLE_NAME + "(TITLE, PLACE, PAGE, NR, LYRICS, CHORDS) VALUES ('Apel Jasnogórski', 'Białystok Warsztaty 2018', '61', '46', '', '');");
+
+
     }
 
     @Override
@@ -1655,6 +1806,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME2);
         onCreate(db);
+    }
+
+    private void addSongBook(){
+
     }
 
     public boolean insertData(String title, String place, String page, String nr, String lyrics, String chords ){
@@ -1763,7 +1918,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public List<String> getAllSongbooks(){
         List<String> songbooks = new ArrayList<>();
 
-        String selectQuery = "SELECT * FROM " + TABLE_NAME2;
+        String selectQuery = "SELECT * FROM " + TABLE_NAME2 + " ORDER BY TITLE";
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
